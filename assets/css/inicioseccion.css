@@ -1,0 +1,53 @@
+body {
+  font-family: 'Garamond', serif;
+  margin: 0;
+  line-height: 1.7;
+  color: #333;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 250px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  background-color: #e6739f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d15e8a;
+}

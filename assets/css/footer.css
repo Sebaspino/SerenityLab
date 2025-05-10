@@ -1,0 +1,58 @@
+/* -- Pie de página --*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* Distribuye mejor los elementos */
+  gap: 1.5rem;
+  background-color: #f8f8f8;
+  /* Un fondo más oscuro para el pie de página */
+  color: #333;
+  /* Texto claro en el pie de página */
+  padding: 2rem;
+  text-align: left;
+  /* Alineación de texto a la izquierda por defecto */
+}
+
+.footer__div {
+  margin-bottom: 1.5rem;
+}
+
+.footer__div--h4 {
+  font-family: 'Garamond', serif;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  /* Un color ligeramente más claro para los títulos */
+}
+
+.footer__div--img {
+  height: 20px;
+  /* Reduce el tamaño de los iconos */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  /* Alinea verticalmente con el texto */
+}
+
+.footer__div--a {
+  font-size: 1rem;
+  color: #f8f8f8;
+  text-decoration: none;
+  display: block;
+  /* Para que los enlaces ocupen todo el ancho y sean más fáciles de tocar */
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__div--a:hover {
+  color: rgb(238, 44, 130);
+}
+
+.footer__iframe {
+  width: 100%;
+  /* El iframe ocupa todo el ancho de su contenedor */
+  max-width: 400px;
+  height: auto;
+  /* La altura se ajusta proporcionalmente */
+  border: 0;
+}

@@ -1,0 +1,47 @@
+
+#carouselExampleIndicators { /* Asegúrate de que el ID coincida con tu HTML */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#carouselExampleIndicators .carousel-inner {
+  height: 100%;
+}
+
+#carouselExampleIndicators .carousel-item {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out, visibility 0.6s ease-in-out; /* Asegúrate de tener transiciones */
+  backface-visibility: hidden; /* Mejora la suavidad de las transiciones */
+}
+
+#carouselExampleIndicators .carousel-item.active {
+  display: block; /* Asegúrate de que el item activo se muestre */
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#carouselExampleIndicators .carousel-item:not(.active) {
+  display: none; /* Oculta los otros items por defecto */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%); /* O cualquier otra posición fuera de la vista */
+}
+
+#carouselExampleIndicators .carousel-item video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Oculta indicadores y controles para el fondo */
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
