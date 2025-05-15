@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de inicio - SerenityLab</title>
+    <title>SerenityLab</title>
     <link rel="icon" href="assets/img/isotipo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/body.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
@@ -26,7 +27,7 @@
         </div>
         <nav class="header__nav">
             <a class="header__nav--a" href="pages/psicologos.html">Psicologos</a>
-            <a class="header__nav--a" href="pages/buzón.html">Buzón anónimo</a>
+            <a class="header__nav--a" href="pages/buzon.html">Buzón anónimo</a>
         </nav>
         <div>
             <a href="pages/iniciosesion.html"><img src="assets/iconos/acceso.png" class="header__logo--img"
@@ -34,84 +35,88 @@
             </a>
         </div>
     </header>
-    <!-- Carrusel -->
-    <section class="hero">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video class="d-block w-100" autoplay loop muted>
-                        <source src="assets/videos/banner1.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+    <main>
+        <!-- Carrusel -->
+        <section class="hero">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay loop muted>
-                        <source src="assets/videos/banner2.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner1.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner2.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner3.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <video class="d-block w-100" autoplay loop muted>
-                        <source src="assets/videos/banner3.mp4" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
-                    </video>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- Sección sobre SerenityLab -->
+        <section class="about">
+            <h1>SerenityLab</h1>
+            <p>
+                En SerenityLab creemos en el poder de la escucha activa y en la importancia de promover acciones que
+                favorezcan el bienestar integral de nuestros estudiantes.
+            </p>
+            <p>
+                Este sitio web ha sido creado especialmente para promover y fortalecer el bienestar integral de los
+                estudiantes del CESDE. Ofrece un espacio accesible y seguro donde podrás encontrar recursos,
+                herramientas y
+                apoyo profesional para tu desarrollo emocional, mental y académico. Aquí tendrás acceso directo a
+                orientación psicológica y acompañamiento en momentos de estrés, dificultades personales o cuando
+                necesites
+                hablar con alguien.
+            </p>
+        </section>
+        <!-- Servicios ofrecidos -->
+        <section class="services">
+            <h2>Conoce nuestros servicios</h2>
+            <div class="service-cards">
+                <div class="service-cards__card">
+                    <a href="pages/iniciosesion.html"><img class="service-cards__card--img" src="assets/img/agenda.png"
+                            alt="Agendamiento de citas"></a>
+                    <h3 class="service-cards__card--h3">Agendamiento de citas</h3>
+                    <p class="service-cards__card--p">Accede con tu cuenta para consultar la disponibilidad de nuestro
+                        equipo de profesionales.</p>
+                </div>
+                <div class="service-cards__card">
+                    <a href="pages/buzón.html"><img class="service-cards__card--img" src="assets/img/buzon.png"
+                            alt="Buzón anónimo"></a>
+                    <h3 class="service-cards__card--h3">Buzón anónimo</h3>
+                    <p class="service-cards__card--p">Puedes compartir tus preocupaciones de manera segura y anónima.
+                        Garantizamos que serán escuchadas.</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-    <!-- Sección sobre SerenityLab -->
-    <section class="about">
-        <h1>SerenityLab</h1>
-        <p>
-            En SerenityLab creemos en el poder de la escucha activa y en la importancia de promover acciones que
-            favorezcan el bienestar integral de nuestros estudiantes.
-        </p>
-        <p>
-            Este sitio web ha sido creado especialmente para promover y fortalecer el bienestar integral de los
-            estudiantes del CESDE. Ofrece un espacio accesible y seguro donde podrás encontrar recursos, herramientas y
-            apoyo profesional para tu desarrollo emocional, mental y académico. Aquí tendrás acceso directo a
-            orientación psicológica y acompañamiento en momentos de estrés, dificultades personales o cuando necesites
-            hablar con alguien.
-        </p>
-    </section>
-    <!-- Servicios ofrecidos -->
-    <section class="services">
-        <h2>Conoce nuestros servicios</h2>
-        <div class="service-cards">
-            <div class="service-cards__card">
-                <a href="pages/iniciosesion.html"><img class="service-cards__card--img" src="assets/img/agenda.png"
-                        alt="Agendamiento de citas"></a>
-                <h3 class="service-cards__card--h3">Agendamiento de citas</h3>
-                <p class="service-cards__card--p">Accede con tu cuenta para consultar la disponibilidad de nuestro
-                    equipo de profesionales.</p>
-            </div>
-            <div class="service-cards__card">
-                <a href="pages/buzón.html"><img class="service-cards__card--img" src="assets/img/buzon.png"
-                        alt="Buzón anónimo"></a>
-                <h3 class="service-cards__card--h3">Buzón anónimo</h3>
-                <p class="service-cards__card--p">Puedes compartir tus preocupaciones de manera segura y anónima.
-                    Garantizamos que serán escuchadas.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <!-- pie de página -->
     <footer class="footer">
         <div class="footer__div">

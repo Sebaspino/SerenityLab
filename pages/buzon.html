@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buzón anónimo - SerenityLab</title>
+    <link rel="icon" href="../assets/img/isotipo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/body.css">
     <link rel="stylesheet" href="../assets/css/buzon.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-
 </head>
-<body>
 
+<body>
+    <!-- Barra de navegación -->
     <header class="header">
         <div class="header__logo">
             <img src="../assets/img/isotipo.png" class="header__logo--img" alt="Logotipo de SerenityLab"
-            onclick="location.href='../index.html'">
+                onclick="location.href='../index.html'">
         </div>
         <nav class="header__nav">
             <a class="header__nav--a" href="psicologos.html">Psicologos</a>
@@ -26,17 +29,30 @@
             </a>
         </div>
     </header>
+    <!-- Buzon de mensajes -->
+    <main class="buzon-contenedor">
+        <section class="buzon">
+            <h1>Buzón Anónimo</h1>
+            <p>En SerenityLab creemos en el poder de la escucha activa y en la importancia de promover acciones que
+                favorezcan el bienestar integral de nuestros estudiantes.</p>
+            <p>Este espacio es confidencial y seguro. Comparte tus pensamientos, emociones o dificultades sin necesidad
+                de identificarte. Estamos aquí para ti.</p>
+            <form>
+                <!-- Espacios para escritura  -->
+                <label for="mensaje">¿Qué quieres contarnos?</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                    required></textarea>
 
+                <label for="info">¿Deseas agregar información adicional?</label>
+                <textarea id="info" name="info" rows="3" placeholder="Opcional..."></textarea>
 
-    <div class="container">
-        <h1>Buzón anonimo</h1>
-        
-    </div>
+                <button type="submit">Enviar</button>
 
-
-
-
-<!-- pie de página -->
+                <p class="thank-you">Gracias por tu mensaje. Tu voz es importante para nosotros.</p>
+            </form>
+        </section>
+    </main>
+    <!-- pie de página -->
     <footer class="footer">
         <div class="footer__div">
             <h4 class="footer__div--h4">Contacto</h4>
@@ -62,9 +78,10 @@
                     src="../assets/iconos/facebook.png" alt="Facebook"></a>
             <a href="https://www.instagram.com/cesdeoficial/?hl=es"><img class="footer__div--img"
                     src="../assets/iconos/instagram.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/c/SomosCESDE"><img class="footer__div--img" src="../assets/iconos/youtube.png"
-                    alt="Youtube"></a>
+            <a href="https://www.youtube.com/c/SomosCESDE"><img class="footer__div--img"
+                    src="../assets/iconos/youtube.png" alt="Youtube"></a>
         </div>
     </footer>
 </body>
+
 </html>

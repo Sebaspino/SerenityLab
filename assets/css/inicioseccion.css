@@ -1,53 +1,67 @@
-body {
-  font-family: 'Garamond', serif;
-  margin: 0;
-  line-height: 1.7;
-  color: #333;
-  font-size: 1rem;
-  background-color: rgb(255, 255, 255);
-}
-
+/* Estilos generales del contenedor del formulario de inicio de sesión */
 .container {
   text-align: center;
+  font-family: 'Garamond', serif;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 0 120px; /* Aumenta el padding lateral para separar las barras */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Estilos del logo */
 .logo {
   width: 200px;
-  margin: 20px 0;
+  margin: 20px auto; /* Centra el logo horizontalmente */
+  display: block; /* Para que el auto margin funcione */
 }
 
+/* Estilos del formulario de inicio de sesión */
 .login-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 10px; /* Espacio entre los elementos del formulario */
+  width: 100%; /* El formulario ocupa todo el ancho del contenedor */
 }
 
+/* Estilos para los campos de entrada de email y contraseña */
 .login-form input[type="email"],
 .login-form input[type="password"] {
-  width: 250px;
+  width: 100%; /* Los campos de entrada ocupan todo el ancho del formulario */
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+  font-size: 1rem; /* Mantiene la consistencia del tamaño de la fuente */
 }
 
+/* Estilos para el contenedor del checkbox "Recordarme" */
 .checkbox-container {
   display: flex;
   align-items: center;
   gap: 5px;
+  align-self: flex-start; /* Alinea el checkbox a la izquierda del formulario */
 }
 
+/* Estilos del botón */
 button {
-  width: 150px;
+  width: 100%; /* El botón ocupa todo el ancho del formulario */
   padding: 10px;
-  background-color: #e6739f;
+  background-color: #e6739f; /* Color rosa */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem; /* Mantiene la consistencia del tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
 
 button:hover {
-  background-color: #d15e8a;
+  background-color: #d15e8a; /* Color rosa más oscuro al pasar el ratón */
 }
