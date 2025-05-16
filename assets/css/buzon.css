@@ -1,11 +1,14 @@
 /* Estilos para el contenedor principal del buzón */
 .buzon-contenedor {
   display: flex;
-  justify-content: center; /* Centra el buzón horizontalmente */
-  position: relative; /* Para posicionar los pseudo-elementos */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: 2rem auto; /* Espacio arriba y abajo, centrado horizontalmente */
-  padding: 0 20px; /* Espacio a los lados */
+  justify-content: center;
+  position: relative;
+  /* Para posicionar los pseudo-elementos */
+  max-width: 1200px;
+  margin: 2rem auto;
+  /* Espacio arriba y abajo, centrado horizontalmente */
+  padding: 0 20px;
+  /* Espacio a los lados */
 }
 
 /* Estilos para las barras laterales decorativas */
@@ -16,39 +19,44 @@
   top: 0;
   bottom: 0;
   width: 100px;
-  background-color: rgba(238, 44, 130, 0.1); /* Rosa pálido */
-  z-index: -1; /* Detrás del contenido principal */
-  border: 1px solid rgba(238, 44, 130, 0.2); /* Borde rosa claro */
+  background-color: rgba(238, 44, 130, 0.1);
+  z-index: -1;
+  /* Detrás del contenido principal */
+  border: 1px solid rgba(238, 44, 130, 0.2);
 }
 
 .buzon-contenedor::before {
   left: 0;
-  border-right: 2px solid rgba(238, 44, 130, 0.3); /* Borde derecho rosa medio */
-  border-radius: 8px 0 0 8px; /* Bordes redondeados a la izquierda */
+  border-right: 2px solid rgba(238, 44, 130, 0.3);
+  border-radius: 8px 0 0 8px;
+  /* Bordes redondeados a la izquierda */
 }
 
 .buzon-contenedor::after {
   right: 0;
-  border-left: 2px solid rgba(238, 44, 130, 0.3); /* Borde izquierdo rosa medio */
-  border-radius: 0 8px 8px 0; /* Bordes redondeados a la derecha */
+  border-left: 2px solid rgba(238, 44, 130, 0.3);
+  border-radius: 0 8px 8px 0;
+  /* Bordes redondeados a la derecha */
 }
 
 /* Estilos para el contenedor del buzón (formulario) */
 .buzon {
   padding: 3rem 2rem;
-  background-color: #fff; /* Fondo blanco */
+  background-color: #fff;
   border-radius: 8px;
-  max-width: 600px; /* Ancho máximo del formulario */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 600px;
+  /* Ancho máximo del formulario */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Garamond', serif;
-  color: #333; /* Texto principal oscuro */
-  flex: 0 1 100%; /* Permite que el buzón ocupe todo el ancho disponible en flex */
+  color: #333;
+  flex: 0 1 100%;
+  /* Permite que el buzón ocupe todo el ancho disponible en flex */
 }
 
 /* Estilos para el título del buzón */
 .buzon h1 {
   font-size: 2rem;
-  color: rgb(238, 44, 130); /* Rosa principal */
+  color: #333;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -57,7 +65,7 @@
 .buzon p {
   font-size: 1.13rem;
   line-height: 1.7;
-  color: #555; /* Texto secundario gris */
+  color: #333;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -65,54 +73,62 @@
 /* Estilos para el formulario */
 .buzon form {
   display: flex;
-  flex-direction: column; /* Apila los elementos del formulario verticalmente */
-  gap: 1.2rem; /* Espacio entre los elementos del formulario */
+  flex-direction: column;
+  /* Apila los elementos del formulario verticalmente */
+  gap: 1.2rem;
+  /* Espacio entre los elementos del formulario */
 }
 
 /* Estilos para las etiquetas de los campos del formulario */
 .buzon label {
   font-size: 1rem;
   color: #333;
-  display: block; /* Las etiquetas ocupan todo el ancho */
+  display: block;
+  /* Las etiquetas ocupan todo el ancho */
   margin-bottom: 0.5rem;
 }
 
 /* Estilos para el área de texto */
 .buzon textarea {
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical;
+  /* Permite redimensionar verticalmente */
   min-height: 150px;
   padding: 1rem;
   font-size: 1rem;
   font-family: 'Garamond', serif;
-  border: 1px solid #ccc; /* Borde gris */
+  border: 1px solid #ccc;
+  /* Borde gris */
   border-radius: 6px;
   width: 100%;
-  box-sizing: border-box; /* El padding y el borde se incluyen en el ancho */
+  box-sizing: border-box;
+  /* El padding y el borde se incluyen en el ancho */
 }
 
 /* Estilos para el botón de envío */
 .buzon button {
-  background-color: rgb(238, 44, 130); /* Rosa principal */
-  color: #fff; /* Texto blanco */
+  background-color: rgb(238, 44, 130);
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  align-self: flex-end; /* Alinea el botón a la derecha dentro del formulario flex */
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  align-self: flex-end;
+  /* Alinea el botón a la derecha dentro del formulario flex */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el hover */
   margin-top: 1rem;
 }
 
 .buzon button:hover {
-  background-color: rgb(200, 35, 110); /* Rosa más oscuro al pasar el ratón */
+  background-color: rgb(200, 35, 110);
 }
 
 /* Estilos para el mensaje de agradecimiento (si se muestra) */
 .thank-you {
   text-align: center;
   font-family: 'Garamond', serif;
-  color: #555;
+  color: #333;
   font-size: 1.1rem;
   margin-top: 1.5rem;
 }
@@ -121,54 +137,61 @@
 
 /* Para pantallas de hasta 768px de ancho (tabletas) */
 @media (max-width: 768px) {
+
   .buzon-contenedor::before,
   .buzon-contenedor::after {
     width: 40px;
-    background-color: rgba(238, 44, 130, 0.05); /* Rosa aún más pálido */
+    background-color: rgba(238, 44, 130, 0.05);
   }
 
   .buzon {
-    padding: 2rem 1rem; /* Reduce el padding del buzón */
+    padding: 2rem 1rem;
+    /* Reduce el padding del buzón */
   }
 }
 
 /* Para pantallas de hasta 480px de ancho (móviles) */
 @media (max-width: 480px) {
+
   .buzon-contenedor::before,
   .buzon-contenedor::after {
-    display: none; /* Oculta las barras laterales en móviles */
+    display: none;
+    /* Oculta las barras laterales en móviles */
   }
 
   .buzon-contenedor {
-    padding: 0 10px; /* Reduce aún más el padding lateral del contenedor */
-    margin-top: 1rem; /* Reduce el margen superior */
-    margin-bottom: 1rem; /* Reduce el margen inferior */
+    padding: 0 10px;
+    /* Reduce aún más el padding lateral del contenedor */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .buzon {
-    padding: 1.5rem 0.8rem; /* Reduce el padding del buzón en móviles */
+    padding: 1.5rem 0.8rem;
+    /* Reduce el padding del buzón en móviles */
   }
 
   .buzon h1 {
-    font-size: 1.75rem; /* Reduce el tamaño del título */
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 
   .buzon p {
-    font-size: 1rem; /* Reduce el tamaño del párrafo */
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .buzon form {
-    gap: 1rem; /* Reduce el espacio entre los elementos del formulario */
+    gap: 1rem;
   }
 
   .buzon label {
-    font-size: 0.9rem; /* Reduce el tamaño de las etiquetas */
+    font-size: 0.9rem;
   }
 
   .buzon textarea {
-    min-height: 120px; /* Reduce la altura mínima del textarea */
+    min-height: 120px;
+    /* Reduce la altura mínima del textarea */
     font-size: 0.9rem;
     padding: 0.8rem;
   }

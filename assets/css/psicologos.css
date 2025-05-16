@@ -1,0 +1,181 @@
+/* ===== VARIABLES ===== */
+:root {
+    /* Paleta de colores */
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-accent: #e74c3c;
+    --color-dark: #333333;
+    --color-light: #ecf0f1;
+
+    /* Variaciones de colores */
+    --color-primary-dark: #2980b9;
+    --color-secondary-dark: #27ae60;
+    --color-accent-dark: #c0392b;
+
+    /* Colores de texto */
+    --text-dark: #333333;
+    --text-white: #ffffff;
+    --text-medium: #666666; /* Añadimos un color de texto medio */
+
+    /* Espaciado */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+
+    /* Fuentes */
+    --font-family-heading: 'Garamond', serif;
+
+    /* Tamaños de fuente */
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xxxl: 2.5rem;
+
+    /* Bordes y radios */
+    --border-radius-sm: 4px;
+
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+
+    /* Contenedores */
+    --container-max-width: 1200px;
+    --container-padding: var(--spacing-md);
+}
+
+/* ===== UTILIDADES ===== */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* ===== TIPOGRAFÍA ===== */
+h2, h3 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark); /* Mantenemos el color oscuro para los párrafos generales si los hay */
+}
+
+/* ===== BOTONES ===== */
+.button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color var(--transition-fast);
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--text-white);
+}
+
+/* ===== SECCIONES COMUNES ===== */
+.component-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.component-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+/* ===== CARD GRID MINIMALISTA ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: calc(var(--spacing-lg) * -1);
+}
+
+.card {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-lg); /* Agregamos un margen inferior igual al gap */
+}
+
+.card__image {
+    width: 100%;
+    height: auto; /* Para mantener la proporción */
+}
+
+.card__image img {
+    display: block; /* Evita espacio extra debajo de la imagen */
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+}
+
+.card__content {
+    padding: var(--spacing-md);
+    flex-grow: 1; /* Para que el contenido ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark); /* Aseguramos que el título sea oscuro */
+}
+
+.card__description {
+    font-size: var(--font-size-md);
+    color: var(--text-medium); /* Usamos el color de texto medio para la descripción */
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
+}
+
+.card__button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    background-color: var(--color-secondary);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color var(--transition-fast);
+}
+
+.card__button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+}
