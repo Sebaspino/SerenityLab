@@ -103,25 +103,35 @@
   box-sizing: border-box;
   /* El padding y el borde se incluyen en el ancho */
 }
-
-/* Estilos para el botón de envío */
-.buzon button {
-  background-color: rgb(238, 44, 130);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  align-self: flex-end;
-  /* Alinea el botón a la derecha dentro del formulario flex */
-  transition: background-color 0.3s ease;
-  /* Transición suave para el hover */
-  margin-top: 1rem;
+/* Estilos para el contenedor que centrará el botón */
+.boton-contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene una altura definida */
+    margin-top: 1.5rem; /* Margen superior para separar del contenido anterior */
 }
 
-.buzon button:hover {
-  background-color: rgb(200, 35, 110);
+/* Estilos para el botón en sí, usando la clase 'volver-btn' */
+.volver-btn {
+    display: inline-block; /* Crucial para que el padding y los márgenes funcionen como se espera */
+    background: linear-gradient(135deg, #ee2cce, #f29efd);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(238, 44, 130, 0.3);
+    /* Elimina 'margin: 1.5rem auto 0;' de aquí porque el contenedor lo centrará */
+    animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+/* Estilos para el efecto hover del botón */
+.volver-btn:hover {
+    background-color: rgb(200, 35, 110); /* O ajusta el color del hover a tu gusto */
 }
 
 /* Estilos para el mensaje de agradecimiento (si se muestra) */

@@ -29,27 +29,33 @@
             </a>
         </div>
     </header>
-    <main class="buzon-contenedor">
-        <!-- Contenido de login -->
-        <div class="container">
+    <main class="buzon-contenedor, body">
+    <div class="main-content-wrapper"> <div class="container">
             <h1>Inicio de sesión</h1>
-            <form class="login-form">
-                <!--Correo electronico-->
+            <form class="roles" aria-labelledby="login-heading">
+                <p id="login-heading" class="visually-hidden">Formulario de inicio de sesión</p>
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" placeholder="name@cesde.net">
-                <!--Contraseña-->
+                <input type="email" id="email" name="email" placeholder="name@cesde.net" autocomplete="email" required>
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" placeholder="Password">
-                <!--Recordar datos-->
-                <div class="checkbox-container">
-                    <input type="checkbox" id="remember">
+                <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+                <div class="roles">
+                    <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Recuérdame</label>
                 </div>
-                <a href="#" id="#">Olvidaste tu contraseña?</a>
+                <a href="#" id="forgot-password-link">¿Olvidaste tu contraseña?</a>
                 <button type="submit">Ingresar</button>
             </form><br>
         </div>
-    </main>
+        <div class="container">
+            <h1>Bienvenido al Sistema</h1>
+            <p>Selecciona tu rol para continuar:</p>
+            <div class="roles">
+                <a href="vistapsicologo.html" class="rol-card psicologo" aria-label="Ingresar como psicólogo">👨‍⚕️ Psicólogo</a>
+                <a href="#" class="rol-card estudiante" aria-label="Ingresar como estudiante">🎓 Estudiante</a>
+            </div>
+        </div>
+    </div>
+</main>
     <!-- pie de página -->
     <footer class="footer">
         <div class="footer__div">

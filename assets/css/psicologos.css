@@ -1,181 +1,124 @@
-/* ===== VARIABLES ===== */
-:root {
-    /* Paleta de colores */
-    --color-primary: #3498db;
-    --color-secondary: #2ecc71;
-    --color-accent: #e74c3c;
-    --color-dark: #333333;
-    --color-light: #ecf0f1;
-
-    /* Variaciones de colores */
-    --color-primary-dark: #2980b9;
-    --color-secondary-dark: #27ae60;
-    --color-accent-dark: #c0392b;
-
-    /* Colores de texto */
-    --text-dark: #333333;
-    --text-white: #ffffff;
-    --text-medium: #666666; /* Añadimos un color de texto medio */
-
-    /* Espaciado */
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-xxl: 3rem;
-
-    /* Fuentes */
-    --font-family-heading: 'Garamond', serif;
-
-    /* Tamaños de fuente */
-    --font-size-md: 1rem;
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.5rem;
-    --font-size-xxl: 2rem;
-    --font-size-xxxl: 2.5rem;
-
-    /* Bordes y radios */
-    --border-radius-sm: 4px;
-
-    /* Transiciones */
-    --transition-fast: 0.2s ease;
-
-    /* Contenedores */
-    --container-max-width: 1200px;
-    --container-padding: var(--spacing-md);
+body {
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f4;
+    color: #333;
 }
 
-/* ===== UTILIDADES ===== */
-.container {
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-
-/* ===== TIPOGRAFÍA ===== */
-h2, h3 {
-    font-family: var(--font-family-heading);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: var(--spacing-md);
-    color: var(--text-dark);
-}
-
-h2 {
-    font-size: var(--font-size-xxl);
-}
-
-h3 {
-    font-size: var(--font-size-xl);
-}
-
-p {
-    margin-bottom: var(--spacing-md);
-    color: var(--text-dark); /* Mantenemos el color oscuro para los párrafos generales si los hay */
-}
-
-/* ===== BOTONES ===== */
-.button {
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: var(--color-primary);
-    color: var(--text-white);
-    border: none;
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
+h1 {
     text-align: center;
-    font-weight: 600;
-    transition: background-color var(--transition-fast);
+    font-size: 2rem;
 }
 
-.button:hover {
-    background-color: var(--color-primary-dark);
-    color: var(--text-white);
-}
-
-/* ===== SECCIONES COMUNES ===== */
-.component-container {
-    margin: 20px;
-    padding: 20px;
-}
-
-.component-title {
-    margin-bottom: var(--spacing-lg);
+header {
+    background-color: #ee49a4; /*Rosado similiar al de la tematica que venimos aplicando para el proyecto de serenity*/
+    padding: 5px;
     text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
-/* ===== CARD GRID MINIMALISTA ===== */
-.card-grid {
+.therapist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: calc(var(--spacing-lg) * -1);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 4 columnas para pantallas grandes, ajusta automáticamente */
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto;
 }
 
-.card {
-    background-color: var(--color-light);
-    border-radius: var(--border-radius-sm);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--spacing-lg); /* Agregamos un margen inferior igual al gap */
-}
-
-.card__image {
-    width: 100%;
-    height: auto; /* Para mantener la proporción */
-}
-
-.card__image img {
-    display: block; /* Evita espacio extra debajo de la imagen */
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
-}
-
-.card__content {
-    padding: var(--spacing-md);
-    flex-grow: 1; /* Para que el contenido ocupe el espacio restante */
-    display: flex;
-    flex-direction: column;
-}
-
-.card__title {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark); /* Aseguramos que el título sea oscuro */
-}
-
-.card__description {
-    font-size: var(--font-size-md);
-    color: var(--text-medium); /* Usamos el color de texto medio para la descripción */
-    margin-bottom: var(--spacing-md);
-    flex-grow: 1; /* Empuja el botón hacia abajo si el texto es corto */
-}
-
-.card__button {
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-xl);
-    background-color: var(--color-secondary);
-    color: var(--text-white);
-    border: none;
-    border-radius: var(--border-radius-sm);
-    text-decoration: none;
+.therapist-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #f123951a;
+    padding: 20px;
     text-align: center;
-    font-weight: 600;
-    transition: background-color var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card__button:hover {
-    background-color: var(--color-secondary-dark);
+.therapist-card img {
+    width: 120px; /* Tamaño de la imagen */
+    height: 120px;
+    border-radius: 50%; /* Para hacerla redonda */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ee49a4; /* Un borde sutil alrededor de la imagen */
 }
 
+.therapist-card h3 {
+    margin: 10px 0 5px;
+    color: #df628c; /* Un azul para los nombres */
+}
 
-/* ===== MEDIA QUERIES ===== */
+.therapist-card .role {
+    font-weight: bold;
+    color: #814d5e;
+    margin-bottom: 5px;
+}
+
+.therapist-card .specialty {
+    font-style: italic;
+    color: #35031a;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.therapist-card .description {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.5;
+    text-align: justify; /* Alinea el texto de la descripción a la izquierda */
+}
+
+.serenty-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.serenity-button img {
+    width: 60px; /* Tamaño del icono de Serenity para redirecionar al inicio de seccion  */
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cuadro-adicional-de-informacion {
+   background-color: #ee49a4; /* Un gris muy claro de fondo */
+   border: 1px solid #ff75af; /* Un borde sutil */
+   padding: 20px;
+   text-align: center;
+   margin-top: 10px; /* Espacio superior para separarlo del contenido principal */
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 800px; /* Ancho máximo del cuadro */
+   border-radius: 5px;
+   color: #ffffff;
+   font-size: 1em;
+}
+
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    .therapist-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .therapist-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+        padding: 0 10px;
+    }
+    .therapist-card {
+        padding: 15px;
+    }
+    .whatsapp-button img {
+        width: 50px;
+        height: 50px;
     }
 }
