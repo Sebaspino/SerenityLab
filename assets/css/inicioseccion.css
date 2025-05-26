@@ -1,82 +1,202 @@
-/* Estilos generales del contenedor del formulario de inicio de sesión */
-.body {
-    margin: 0;
-    font-family: 'Garamond', serif;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-    color: #fff;
-    display: grid; /* Cambia a Grid */
-    /* Define 2 columnas para tus 2 'container' */
-    grid-template-columns: 1fr 1fr; /* O 1fr para que ocupen el mismo espacio */
-    gap: 40px; /* Espacio entre las columnas */
-    height: 100vh;
-    place-items: center; /* Centra los elementos horizontal y verticalmente en sus celdas de la cuadrícula */
+/* inicioseccion.css */
+
+/* Estilos para el contenedor principal que contendrá los dos 'container' */
+.main-content-flex-container {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente (los dos 'container') */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 40px; /* Espacio entre los dos contenedores */
+    flex-grow: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+    padding: 20px; /* Un poco de padding alrededor para no pegarse a los bordes */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+
+    /* Para que los elementos se apilen en pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no hay espacio */
 }
 
 .container {
-  text-align: center;
- /*  background-color: rgba(0, 0, 0, 0.4); */
- background: linear-gradient(to right, #f35c7d, #a961f1);
-  padding: 80px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background: linear-gradient(to right, #f35c7d, #a961f1);
+    padding: 60px; /* Ajustado para mejor apariencia */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Permite que ambos contenedores crezcan y ocupen el espacio disponible */
+    min-width: 300px; /* Asegura que cada contenedor tenga un ancho mínimo */
+    max-width: 500px; /* Limita el ancho máximo para que no se extiendan demasiado */
 }
 
+.login-form-elements {
+    display: flex;
+    flex-direction: column; /* Apila los elementos del formulario verticalmente */
+    gap: 15px; /* Espacio entre los elementos del formulario */
+    align-items: center; /* Centra los elementos del formulario */
+}
+
+.login-form-elements label {
+    align-self: flex-start; /* Alinea las etiquetas a la izquierda */
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff; /* Asegura que las etiquetas sean visibles */
+}
+
+.login-form-elements input[type="email"],
+.login-form-elements input[type="text"],
+.login-form-elements input[type="password"] {
+    width: 100%; /* Ocupa el ancho completo de la columna */
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-elements input[type="email"]::placeholder,
+.login-form-elements input[type="text"]::placeholder,
+.login-form-elements input[type="password"]::placeholder {
+    color: #888;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%; /* Ocupa el ancho completo */
+    justify-content: flex-start; /* Alinea "Recuérdame" a la izquierda */
+}
+
+.remember-me input[type="checkbox"] {
+    width: auto; /* Permite que el checkbox tenga su tamaño natural */
+}
+
+#forgot-password-link {
+    color: #ffdd57; /* Un color que contraste para el enlace */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+#forgot-password-link:hover {
+    color: #ffe68a;
+    text-decoration: underline;
+}
+
+.login-form-elements button[type="submit"] {
+    display: inline-block;
+    background: linear-gradient(135deg, #ee2cce, #f29efd);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(238, 44, 130, 0.3);
+    margin-top: 20px; /* Margen superior para separarlo de los elementos de arriba */
+    animation: fadeIn 0.8s ease-out 0.8s both;
+    width: auto; /* Ajusta el ancho al contenido */
+}
+
+.login-form-elements button[type="submit"]:hover {
+    background-color: rgb(200, 35, 110);
+}
+
+
 h1 {
-  margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #fff;
 }
 
 p {
-  font-size: 22px;
-  margin-bottom: 30px;
+    font-size: 22px;
+    color: #eee;
 }
 
 .roles {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Asegura que los botones de rol se envuelvan en pantallas pequeñas */
 }
 
 .rol-card {
-  background-color: #ffffff20;
-  padding: 20px 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff20;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 120px; /* Ancho mínimo para los botones de rol */
 }
 
 .rol-card:hover {
-  background-color: #ffffff40;
-  transform: scale(1.05);
+    background-color: #ffffff40;
+    transform: scale(1.05);
 }
 
 .psicologo {
-  border: 2px solid #ffdd57;
+    border: 2px solid #ffdd57;
 }
 
 .estudiante {
-  border: 2px solid #57d9ff;
+    border: 2px solid #57d9ff;
 }
 
-.main-content-wrapper {
-  display: flex; /* Habilita Flexbox para organizar los 'container' internos */
-  gap: 40px; /* Espacio entre los dos contenedores */
-  /* Puedes ajustar la dirección si quieres que estén uno debajo del otro en lugar de uno al lado del otro */
-  /* flex-direction: column; */
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .main-content-flex-container {
+        flex-direction: column; /* Apila los contenedores en columnas en pantallas pequeñas */
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .container {
+        padding: 40px;
+        flex: none; /* Deshabilita flex-grow para que no se estiren demasiado */
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        max-width: none; /* Elimina la restricción de ancho máximo */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .rol-card {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
 }
 
-/* Para ocultar visualmente elementos, mantén esta clase en tu CSS */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+@media (max-width: 480px) {
+    .container {
+        padding: 30px;
+    }
+
+    .login-form-elements label {
+        font-size: 1em;
+    }
+
+    .login-form-elements input {
+        padding: 10px;
+    }
+
+    .roles {
+        flex-direction: column; /* Apila los roles en columnas en pantallas muy pequeñas */
+    }
+
+    .rol-card {
+        width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
+        max-width: 200px; /* Limita el ancho para que no se vea enorme */
+        margin: 0 auto; /* Centra los botones de rol apilados */
+    }
 }

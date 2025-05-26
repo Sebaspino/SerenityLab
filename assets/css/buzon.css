@@ -1,119 +1,173 @@
-/* Estilos para el contenedor principal del buzón */
+/* --- Animaciones Clave --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* --- Estructura Base del Contenedor de Buzón (Aplicado a ambas páginas) --- */
 .buzon-contenedor {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  /* Para posicionar los pseudo-elementos */
-  max-width: 1200px;
-  margin: 2rem auto;
-  /* Espacio arriba y abajo, centrado horizontalmente */
-  padding: 0 20px;
-  /* Espacio a los lados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height, 80px) - var(--footer-height, 80px)); /* Ajusta según tu header/footer */
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f0ff 0%, #f0f9ff 100%); /* Fondo general */
+    animation: fadeIn 0.8s ease-out;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño */
+    position: relative; /* Para pseudo-elementos decorativos si se usan aquí */
 }
 
-/* Estilos para las barras laterales decorativas */
-.buzon-contenedor::before,
-.buzon-contenedor::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  background-color: rgba(238, 44, 130, 0.1);
-  z-index: -1;
-  /* Detrás del contenido principal */
-  border: 1px solid rgba(238, 44, 130, 0.2);
-}
-
-.buzon-contenedor::before {
-  left: 0;
-  border-right: 2px solid rgba(238, 44, 130, 0.3);
-  border-radius: 8px 0 0 8px;
-  /* Bordes redondeados a la izquierda */
-}
-
-.buzon-contenedor::after {
-  right: 0;
-  border-left: 2px solid rgba(238, 44, 130, 0.3);
-  border-radius: 0 8px 8px 0;
-  /* Bordes redondeados a la derecha */
-}
-
-/* Estilos para el contenedor del buzón (formulario) */
+/* --- Estilos para la Tarjeta Principal del Buzón (Aplicado a ambas páginas) --- */
 .buzon {
-  padding: 3rem 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  max-width: 600px;
-  /* Ancho máximo del formulario */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Garamond', serif;
-  color: #333;
-  flex: 0 1 100%;
-  /* Permite que el buzón ocupe todo el ancho disponible en flex */
+    padding: 3rem 2.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 650px; /* Un ancho máximo consistente */
+    width: 100%;
+    position: relative; /* Para el pseudo-elemento de la barra lateral */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    font-family: 'Garamond', serif; /* Tipo de letra general para el buzón */
+    color: #34495e; /* Color de texto general */
 }
 
-/* Estilos para el título del buzón */
+.buzon:hover {
+    transform: translateY(-5px);
+}
+
+/* Barra decorativa lateral izquierda del buzón */
+.buzon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ee2c82, #f85eab);
+}
+
+/* --- Estilos para Encabezados dentro del Buzón (Aplicado a ambas páginas) --- */
 .buzon h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    animation: fadeIn 0.8s ease-out 0.2s both;
 }
 
-/* Estilos para el párrafo de introducción */
+.buzon h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #f05098, #ff92d2);
+    border-radius: 2px;
+}
+
+/* Estilos para Párrafos dentro del Buzón (Aplicado a ambas páginas) */
 .buzon p {
-  font-size: 1.13rem;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #34495e;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out 0.4s both;
 }
 
-/* Estilos para el formulario */
+/* --- Tarjeta de Mensaje Enviado (Específico para mensajesEnviados.html) --- */
+.mensaje-enviado-contenido { /* Renombrado de .mensaje-enviado para evitar conflicto con el div original */
+    background: rgba(238, 44, 130, 0.05);
+    border-left: 4px solid #ee2c82;
+    border-radius: 8px;
+    padding: 1.8rem;
+    margin: 2.5rem 0;
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.mensaje-enviado-contenido p {
+    text-align: left;
+    margin-bottom: 1rem;
+    animation: none; /* Deshabilita la animación para los párrafos dentro de esta tarjeta */
+    color: #34495e; /* Asegura el color de texto dentro de la tarjeta */
+}
+
+.mensaje-enviado-contenido p:first-child {
+    font-weight: bold;
+    color: #ee2c82;
+    margin-bottom: 0.8rem;
+}
+
+/* --- Estilos para el Formulario (Específico para buzon.html) --- */
 .buzon form {
-  display: flex;
-  flex-direction: column;
-  /* Apila los elementos del formulario verticalmente */
-  gap: 1.2rem;
-  /* Espacio entre los elementos del formulario */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Espacio entre los elementos del formulario */
+    align-items: center; /* Centra los elementos del formulario */
+    margin-top: 2rem;
 }
 
-/* Estilos para las etiquetas de los campos del formulario */
 .buzon label {
-  font-size: 1rem;
-  color: #333;
-  display: block;
-  /* Las etiquetas ocupan todo el ancho */
-  margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #34495e; /* Color de texto para las etiquetas */
+    display: block; /* Asegura que la etiqueta tome su propia línea */
+    margin-bottom: 0.5rem; /* Pequeño espacio debajo de la etiqueta */
+    align-self: flex-start; /* Alinea las etiquetas a la izquierda dentro del flexbox */
 }
 
-/* Estilos para el área de texto */
 .buzon textarea {
-  resize: vertical;
-  /* Permite redimensionar verticalmente */
-  min-height: 150px;
-  padding: 1rem;
-  font-size: 1rem;
-  font-family: 'Garamond', serif;
-  border: 1px solid #ccc;
-  /* Borde gris */
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
-  /* El padding y el borde se incluyen en el ancho */
+    resize: vertical;
+    min-height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Garamond', serif;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box; /* El padding y el borde se incluyen en el ancho */
+    color: #333; /* Color de texto para el textarea */
+    background-color: #f8f8f8; /* Fondo ligero para el textarea */
 }
-/* Estilos para el contenedor que centrará el botón */
+
+/* Estilo para el mensaje de agradecimiento (Específico para buzon.html) */
+.thank-you {
+    text-align: center;
+    font-style: italic;
+    color: #57d9ff; /* Un color distintivo para este mensaje */
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    animation: fadeIn 0.8s ease-out 1s both; /* Animación para el mensaje */
+}
+
+
+/* --- Contenedor de Botones (Aplicado a ambas páginas) --- */
 .boton-contenedor {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente si el contenedor tiene una altura definida */
-    margin-top: 1.5rem; /* Margen superior para separar del contenido anterior */
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 2.5rem; /* Margen superior para separarse del contenido */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan a la siguiente línea en pantallas pequeñas */
 }
 
-/* Estilos para el botón en sí, usando la clase 'volver-btn' */
+/* --- Botones (Aplicado a ambas páginas) --- */
 .volver-btn {
-    display: inline-block; /* Crucial para que el padding y los márgenes funcionen como se espera */
+    display: inline-block;
     background: linear-gradient(135deg, #ee2cce, #f29efd);
     color: white;
     padding: 0.9rem 2.2rem;
@@ -125,95 +179,161 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(238, 44, 130, 0.3);
-    /* Elimina 'margin: 1.5rem auto 0;' de aquí porque el contenedor lo centrará */
+    /* margin: 1.5rem auto 0; - Esto se maneja con el gap del contenedor */
     animation: fadeIn 0.8s ease-out 0.8s both;
+    text-align: center; /* Asegura que el texto esté centrado en el botón */
+    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
 }
 
-/* Estilos para el efecto hover del botón */
 .volver-btn:hover {
-    background-color: rgb(200, 35, 110); /* O ajusta el color del hover a tu gusto */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(238, 44, 130, 0.4);
+    background: linear-gradient(135deg, #d82678, #8c1fa0); /* Cambio de color en hover */
 }
 
-/* Estilos para el mensaje de agradecimiento (si se muestra) */
-.thank-you {
-  text-align: center;
-  font-family: 'Garamond', serif;
-  color: #333;
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
+.volver-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(238, 44, 130, 0.2);
+}
+
+/* --- Efecto de Confeti Decorativo (Solo si quieres que aparezca en el buzon) --- */
+/* Este estilo parece ser para la página de confirmación, así que lo aplicamos al .buzon de esa página si es necesario */
+/* Si este pseudo-elemento debe estar solo en la página de mensaje enviado, considera una clase específica para el .buzon de esa página. */
+.buzon.mensaje-confirmado::after { /* Ejemplo de cómo se aplicaría si el buzón de confirmación tiene una clase adicional */
+    content: "✓";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 8rem;
+    color: rgba(241, 121, 175, 0.2); /* Menos opaco para ser decorativo */
+    z-index: 0;
+    animation: float 4s ease-in-out infinite;
+    pointer-events: none; /* Asegura que no interfiera con interacciones */
 }
 
 /* --- MEDIA QUERIES (Diseño Responsivo) --- */
 
-/* Para pantallas de hasta 768px de ancho (tabletas) */
 @media (max-width: 768px) {
+    .buzon-contenedor {
+        padding: 1rem;
+    }
 
-  .buzon-contenedor::before,
-  .buzon-contenedor::after {
-    width: 40px;
-    background-color: rgba(238, 44, 130, 0.05);
-  }
+    .buzon {
+        padding: 2.5rem 1.5rem;
+    }
 
-  .buzon {
-    padding: 2rem 1rem;
-    /* Reduce el padding del buzón */
-  }
+    .buzon h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .buzon p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mensaje-enviado-contenido {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .boton-contenedor {
+        flex-direction: column; /* Apila los botones en columnas */
+        gap: 15px;
+        margin-top: 2rem;
+    }
+
+    .volver-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+        width: 100%; /* Los botones apilados ocupan todo el ancho */
+        max-width: 250px; /* Limita el ancho para que no sean demasiado grandes */
+        box-sizing: border-box;
+    }
+
+    .buzon form {
+        gap: 1rem;
+    }
+
+    .buzon label {
+        font-size: 0.95rem;
+    }
+
+    .buzon textarea {
+        min-height: 120px;
+        font-size: 0.95rem;
+    }
 }
 
-/* Para pantallas de hasta 480px de ancho (móviles) */
 @media (max-width: 480px) {
+    .buzon-contenedor {
+        padding: 0.5rem;
+        min-height: calc(100vh - var(--header-height, 60px) - var(--footer-height, 60px)); /* Ajusta para móviles */
+    }
 
-  .buzon-contenedor::before,
-  .buzon-contenedor::after {
-    display: none;
-    /* Oculta las barras laterales en móviles */
-  }
+    .buzon {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
 
-  .buzon-contenedor {
-    padding: 0 10px;
-    /* Reduce aún más el padding lateral del contenedor */
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+    .buzon::before {
+        width: 4px; /* Barra lateral más delgada */
+    }
 
-  .buzon {
-    padding: 1.5rem 0.8rem;
-    /* Reduce el padding del buzón en móviles */
-  }
+    .buzon h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.8rem;
+    }
 
-  .buzon h1 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
+    .buzon h1::after {
+        width: 60px;
+        height: 3px;
+    }
 
-  .buzon p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
+    .buzon p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
 
-  .buzon form {
-    gap: 1rem;
-  }
+    .mensaje-enviado-contenido {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
 
-  .buzon label {
-    font-size: 0.9rem;
-  }
+    .mensaje-enviado-contenido p {
+        font-size: 0.85rem;
+    }
 
-  .buzon textarea {
-    min-height: 120px;
-    /* Reduce la altura mínima del textarea */
-    font-size: 0.9rem;
-    padding: 0.8rem;
-  }
+    .boton-contenedor {
+        gap: 10px;
+        margin-top: 1.5rem;
+    }
 
-  .buzon button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-    margin-top: 0.8rem;
-  }
+    .volver-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 40px;
+    }
 
-  .thank-you {
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
+    .buzon label {
+        font-size: 0.85rem;
+    }
+
+    .buzon textarea {
+        min-height: 100px;
+        font-size: 0.85rem;
+        padding: 0.7rem;
+    }
+
+    .thank-you {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .buzon.mensaje-confirmado::after {
+        font-size: 5rem; /* Tamaño más pequeño para el tick en móviles */
+        top: -15px;
+        right: -15px;
+    }
 }
