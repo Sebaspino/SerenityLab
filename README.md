@@ -106,8 +106,7 @@ A continuación, se detalla la estructura y el propósito de los principales com
 
 ***Creación de la página de inicio de sesión (`iniciosesion.html`):***
 
-* **Para qué sirve**
-Este código proporciona dos formularios principales en la misma página para:
+* **Para qué sirve**: Este código proporciona dos formularios principales en la misma página para:
 
 * **Registro de usuarios**  
    - Permite que nuevos usuarios se registren ingresando su nombre, perfil (Estudiante o Psicólogo) y una contraseña.
@@ -119,15 +118,14 @@ Este código proporciona dos formularios principales en la misma página para:
    - Botones con enlaces para ingresar directamente a perfiles específicos según el rol: Psicólogo o Estudiante.
 
 * **Uso semántico del contenido**
-
-- `<main>`: Contiene el contenido principal de la página (registro e inicio de sesión).
-- `<div class="container">`: Agrupa visualmente cada sección (registro y login)
-- `<h1>`: Títulos principales de cada sección para indicar claramente la función (Registrate, Inicio de sesión).
-- `<form>`: Elemento semántico para agrupar campos de entrada y acciones relacionadas con formularios.
-- `<label>` y `<input>`: Se usan correctamente para asociar cada campo de entrada con su descripción, mejorando accesibilidad.
-- `aria-labelledby`: Intenta mejorar accesibilidad, pero se debería usar un `id` único para cada formulario y que coincida con el atributo, aquí ambos usan "login-heading" lo cual no es correcto.
-- `<button>`: Botón para enviar el formulario de registro.
-- `<a>`: Enlaces para recuperación de contraseña y para seleccionar perfil (rol).
+   - `<main>`: Contiene el contenido principal de la página (registro e inicio de sesión).
+   - `<div class="container">`: Agrupa visualmente cada sección (registro y login)
+   - `<h1>`: Títulos principales de cada sección para indicar claramente la función (Registrate, Inicio de sesión).
+   - `<form>`: Elemento semántico para agrupar campos de entrada y acciones relacionadas con formularios.
+   - `<label>` y `<input>`: Se usan correctamente para asociar cada campo de entrada con su descripción, mejorando accesibilidad.
+   - `aria-labelledby`: Intenta mejorar accesibilidad, pero se debería usar un `id` único para cada formulario y que coincida con el atributo, aquí ambos usan "login-heading" lo cual no es correcto.
+   - `<button>`: Botón para enviar el formulario de registro.
+   - `<a>`: Enlaces para recuperación de contraseña y para seleccionar perfil (rol).
 
 Este código es funcional para registro e inicio de sesión, con una estructura básica y buena intención semántica, pero con algunos detalles para mejorar en accesibilidad y mejores prácticas HTML.
 
@@ -150,33 +148,22 @@ Este código es funcional para registro e inicio de sesión, con una estructura 
 Estas dos secciones facilitan la interacción entre estudiantes y psicólogos dentro de la plataforma, gestionando citas y disponibilidad.
 
 * **Uso semántico del contenido**
-
-- `<main>`: Marca el contenido principal del documento.
-
-- `<div class="contenedor">`: Contenedor general para organizar el contenido visualmente
-
-- `<div class="tarjeta-perfil">`: Agrupa la información del perfil con imagen y datos descriptivos.
-
-- `<img>`: Imagen de perfil con texto alternativo para accesibilidad.
-
-- `<h2>`: Títulos secundarios que indican el nombre del estudiante o psicólogo.
-
-- `<p>`: Párrafos que describen roles, especialidades o información relevante.
-
-- `<form>`: Área interactiva donde se recogen datos para agendar cita o registrar disponibilidad.
-
-- `<label>` y `<select>` / `<input>`: Asociados para mejorar la accesibilidad y describir claramente cada campo del formulario.
-
-- `<button>`: Botones para enviar datos o realizar acciones.
-
-- `<a>` con botones dentro es funcional, pero no es lo más semántico; sería mejor usar solo `<button>` para acciones y `<a>` para enlaces.
+   - `<main>`: Marca el contenido principal del documento.
+   - `<div class="contenedor">`: Contenedor general para organizar el contenido visualmente
+   - `<div class="tarjeta-perfil">`: Agrupa la información del perfil con imagen y datos descriptivos.
+   - `<img>`: Imagen de perfil con texto alternativo para accesibilidad.
+   - `<h2>`: Títulos secundarios que indican el nombre del estudiante o psicólogo.
+   - `<p>`: Párrafos que describen roles, especialidades o información relevante.
+   - `<form>`: Área interactiva donde se recogen datos para agendar cita o registrar disponibilidad.
+   - `<label>` y `<select>` / `<input>`: Asociados para mejorar la accesibilidad y describir claramente cada campo del formulario.
+   - `<button>`: Botones para enviar datos o realizar acciones.
+   - `<a>` con botones dentro es funcional, pero no es lo más semántico; sería mejor usar solo `<button>` para acciones y `<a>` para enlaces.
 
 Este uso de etiquetas semánticas aporta estructura clara y accesible, pero puede ser mejorado para cumplir con las buenas prácticas web.
 
 ***Creación de la sección de perfiles de psicólogos (`psicologos.html`):***
 
-* **Para qué sirve**
-Este código muestra una sección de la página web donde se presentan los perfiles de varios psicólogos profesionales que forman parte de SerenityLab. 
+* **Para qué sirve**: Este código muestra una sección de la página web donde se presentan los perfiles de varios psicólogos profesionales que forman parte de SerenityLab. 
 
 - Permite a los usuarios conocer la información básica y especialidades de cada psicólogo.
 - Proporciona datos de contacto como correo electrónico y teléfono.
@@ -185,18 +172,18 @@ Este código muestra una sección de la página web donde se presentan los perfi
 
 * **Uso semántico**
 
-- `<section>`: Utilizado para agrupar contenido relacionado temáticamente.  
-  - El primer `<section>` contiene el título general de la sección ("Nuestros profesionales - Psicólogos").  
-  - El último `<section>` incluye una nota adicional informativa para el usuario.
-- `<main>`: Contiene el conjunto principal de tarjetas que muestran cada perfil de psicólogo, indicando que este es el contenido principal de la página referente a los profesionales.
-- `<div class="therapist-card">`: Cada tarjeta representa un perfil individual
+    - `<section>`: Utilizado para agrupar contenido relacionado temáticamente.  
+    - El primer `<section>` contiene el título general de la sección ("Nuestros profesionales - Psicólogos").  
+    - El último `<section>` incluye una nota adicional informativa para el usuario.
+    - `<main>`: Contiene el conjunto principal de tarjetas que muestran cada perfil de psicólogo, indicando que este es el contenido principal de la página referente a los profesionales.
+    - `<div class="therapist-card">`: Cada tarjeta representa un perfil individual
 
-- `<h1>` y `<h3>`:  
-  - `<h1>` para el título principal de la sección.  
-  - `<h3>` para los nombres de los psicólogos, actuando como subtítulos dentro de cada tarjeta.
+    - `<h1>` y `<h3>`:  
+        - `<h1>` para el título principal de la sección.  
+        - `<h3>` para los nombres de los psicólogos, actuando como subtítulos dentro de cada tarjeta.
 
-- `<p>`: Párrafos para roles, especialidades, descripciones y datos de contacto.
-- Uso de `alt` en imágenes (`<img>`) para accesibilidad, describiendo la foto del psicólogo.
+    - `<p>`: Párrafos para roles, especialidades, descripciones y datos de contacto.
+    - Uso de `alt` en imágenes (`<img>`) para accesibilidad, describiendo la foto del psicólogo.
 
 Este uso semántico contribuye a una estructura clara, accesible y fácil de interpretar tanto para usuarios como para motores de búsqueda y lectores de pantalla.
 
@@ -213,16 +200,16 @@ Este código crea una sección de **buzón anónimo** para que los usuarios pued
 
 * **Uso semántico**
 
-- `<main>`: Marca el contenido principal de la página, indicando el foco principal del documento.
-- `<section>`: Agrupa un bloque temático, en este caso todo lo relacionado con el buzón anónimo.
-- `<h1>`: Título principal que identifica el propósito de la sección ("Buzón Anónimo").
-- `<p>`: Párrafos para describir la finalidad y condiciones del buzón (confidencialidad y apoyo).
-- `<form>`: Contenedor del formulario donde el usuario ingresa la información.
-- `<label>`: Etiquetas descriptivas para los campos del formulario, mejorando accesibilidad.
-- `<textarea>`: Campos para que el usuario escriba su mensaje principal y una información adicional opcional.
-- `<div class="boton-contenedor">`: Organización visual del botón.
-- `<a>` con clase estilizada como botón para enviar (aunque idealmente debería ser un `<button type="submit">` para mejor semántica).
-- `<p class="thank-you">`: Mensaje de agradecimiento para el usuario.
+    - `<main>`: Marca el contenido principal de la página, indicando el foco principal del documento.
+    - `<section>`: Agrupa un bloque temático, en este caso todo lo relacionado con el buzón anónimo.
+    - `<h1>`: Título principal que identifica el propósito de la sección ("Buzón Anónimo").
+    - `<p>`: Párrafos para describir la finalidad y condiciones del buzón (confidencialidad y apoyo).
+    - `<form>`: Contenedor del formulario donde el usuario ingresa la información.
+    - `<label>`: Etiquetas descriptivas para los campos del formulario, mejorando accesibilidad.
+    - `<textarea>`: Campos para que el usuario escriba su mensaje principal y una información adicional opcional.
+    - `<div class="boton-contenedor">`: Organización visual del botón.
+    - `<a>` con clase estilizada como botón para enviar (aunque idealmente debería ser un `<button type="submit">` para mejor semántica).
+    - `<p class="thank-you">`: Mensaje de agradecimiento para el usuario.
 
 Este uso adecuado de etiquetas semánticas ayuda a estructurar el contenido de manera lógica y accesible, facilitando la comprensión para usuarios y tecnologías asistivas.
 
@@ -239,12 +226,12 @@ Este fragmento de código crea una página de confirmación que informa al usuar
 
 * **Uso semántico**
 
-- `<main>`: Define el contenido principal de la página, ayudando a los lectores de pantalla y motores de búsqueda a entender el foco principal.
-- `<section>`: Agrupa el contenido relacionado, en este caso todo lo relativo a la confirmación del mensaje enviado.
-- `<h1>`: Título principal que indica el éxito del envío del mensaje.
-- `<p>`: Párrafos que describen mensajes de agradecimiento, detalles del mensaje enviado y explicaciones al usuario.
-- `<strong>`: Resalta partes importantes del texto, como etiquetas "Tu mensaje" e "Información adicional".
-- `<div>` con clases específicas para organizar visualmente el mensaje enviado y los botones de navegación.
-- `<a>`: Enlaces para navegación, con clases para estilizar botones.
+    - `<main>`: Define el contenido principal de la página, ayudando a los lectores de pantalla y motores de búsqueda a entender el foco principal.
+    - `<section>`: Agrupa el contenido relacionado, en este caso todo lo relativo a la confirmación del mensaje enviado.
+    - `<h1>`: Título principal que indica el éxito del envío del mensaje.
+    - `<p>`: Párrafos que describen mensajes de agradecimiento, detalles del mensaje enviado y explicaciones al usuario.
+    - `<strong>`: Resalta partes importantes del texto, como etiquetas "Tu mensaje" e "Información adicional".
+    - `<div>` con clases específicas para organizar visualmente el mensaje enviado y los botones de navegación.
+    - `<a>`: Enlaces para navegación, con clases para estilizar botones.
 
 Este uso adecuado de etiquetas semánticas mejora la accesibilidad, estructura el contenido de forma lógica y facilita la comprensión tanto para humanos como para máquinas.
