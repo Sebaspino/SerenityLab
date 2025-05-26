@@ -106,7 +106,7 @@ A continuación, se detalla la estructura y el propósito de los principales com
 
 ***Creación de la página de inicio de sesión (`iniciosesion.html`):***
 
-## Para qué sirve
+* **Para qué sirve**
 Este código proporciona dos formularios principales en la misma página para:
 
 * **Registro de usuarios**  
@@ -118,7 +118,7 @@ Este código proporciona dos formularios principales en la misma página para:
    - Enlace para recuperar la contraseña si se olvida.  
    - Botones con enlaces para ingresar directamente a perfiles específicos según el rol: Psicólogo o Estudiante.
 
-## Uso semántico del contenido
+* **Uso semántico del contenido**
 
 - `<main>`: Contiene el contenido principal de la página (registro e inicio de sesión).
 - `<div class="container">`: Agrupa visualmente cada sección (registro y login)
@@ -132,9 +132,10 @@ Este código proporciona dos formularios principales en la misma página para:
 Este código es funcional para registro e inicio de sesión, con una estructura básica y buena intención semántica, pero con algunos detalles para mejorar en accesibilidad y mejores prácticas HTML.
 
 ***Creación de las páginas de los perfiles (`perfilEstudiante.html`):***
+
 ***Creación de las páginas de los perfiles (`perfilPsicologo.html`):***
 
-## Para qué sirve
+* **Para qué sirve**
 
 1. **Perfil del estudiante con formulario para agendar cita**  
    - Muestra información básica del estudiante (nombre, rol, descripción).  
@@ -148,7 +149,7 @@ Este código es funcional para registro e inicio de sesión, con una estructura 
 
 Estas dos secciones facilitan la interacción entre estudiantes y psicólogos dentro de la plataforma, gestionando citas y disponibilidad.
 
-## Uso semántico del contenido
+* **Uso semántico del contenido**
 
 - `<main>`: Marca el contenido principal del documento.
 
@@ -174,7 +175,7 @@ Este uso de etiquetas semánticas aporta estructura clara y accesible, pero pued
 
 ***Creación de la sección de perfiles de psicólogos (`psicologos.html`):***
 
-## Para qué sirve
+* **Para qué sirve**
 Este código muestra una sección de la página web donde se presentan los perfiles de varios psicólogos profesionales que forman parte de SerenityLab. 
 
 - Permite a los usuarios conocer la información básica y especialidades de cada psicólogo.
@@ -182,7 +183,7 @@ Este código muestra una sección de la página web donde se presentan los perfi
 - Ofrece una descripción personal de cada profesional para generar confianza y cercanía.
 - Incluye una nota adicional que invita al usuario a iniciar sesión para agendar citas con los psicólogos de su interés.
 
-## Uso semántico
+* **Uso semántico**
 
 - `<section>`: Utilizado para agrupar contenido relacionado temáticamente.  
   - El primer `<section>` contiene el título general de la sección ("Nuestros profesionales - Psicólogos").  
@@ -201,7 +202,7 @@ Este uso semántico contribuye a una estructura clara, accesible y fácil de int
 
 ***Creación de la página del buzón anónimo (`buzon.html`):***
 
-## Para qué sirve
+* **Para qué sirve**
 Este código crea una sección de **buzón anónimo** para que los usuarios puedan compartir sus pensamientos, emociones o dificultades de manera confidencial y segura en la plataforma SerenityLab. 
 
 - Permite a los usuarios enviar mensajes de forma anónima.
@@ -210,7 +211,7 @@ Este código crea una sección de **buzón anónimo** para que los usuarios pued
 - Incluye un formulario con campos para el mensaje principal y una información adicional opcional.
 - Proporciona un botón para enviar el mensaje (aunque en este código es un enlace que redirige a otra página).
 
-## Uso semántico
+* **Uso semántico**
 
 - `<main>`: Marca el contenido principal de la página, indicando el foco principal del documento.
 - `<section>`: Agrupa un bloque temático, en este caso todo lo relacionado con el buzón anónimo.
@@ -227,7 +228,7 @@ Este uso adecuado de etiquetas semánticas ayuda a estructurar el contenido de m
 
 ***Creación de la página de mensajes enviados (`mensajesEnviados.html`):***
 
-## Para qué sirve
+* **Para qué sirve**
 Este fragmento de código crea una página de confirmación que informa al usuario que su mensaje fue enviado exitosamente a través de la plataforma SerenityLab. Sirve para:
 
 - Confirmar que el mensaje fue recibido correctamente.
@@ -236,7 +237,7 @@ Este fragmento de código crea una página de confirmación que informa al usuar
 - Reforzar la confianza en el servicio anónimo y seguro.
 - Ofrecer enlaces para volver al buzón de mensajes o a la página principal, facilitando la navegación.
 
-## Uso semántico
+* **Uso semántico**
 
 - `<main>`: Define el contenido principal de la página, ayudando a los lectores de pantalla y motores de búsqueda a entender el foco principal.
 - `<section>`: Agrupa el contenido relacionado, en este caso todo lo relativo a la confirmación del mensaje enviado.
