@@ -25,9 +25,9 @@ La implementación de SerenityLab se justifica por la necesidad de facilitar un 
 
 ---
 
-## 3. Objetivo del Proyecto: Desarrollar una plataforma accesible para la gestión eficiente de servicios de bienestar académico y emocional
+## 3. Objetivo del Proyecto: Desarrollar una plataforma accesible para la gestión eficiente de servicios de bienestar psicologico y emocional
 
-El objetivo principal del proyecto es desarrollar una plataforma en línea accesible que permita a los estudiantes del CESDE gestionar de manera eficiente y rápida los servicios relacionados con su bienestar académico y emocional. Esta plataforma busca simplificar los procesos de solicitud y acceso a los recursos de apoyo disponibles, contribuyendo a un entorno estudiantil más saludable y favorable para el desarrollo integral.
+El objetivo principal del proyecto es desarrollar una plataforma en línea accesible que permita a los estudiantes del CESDE gestionar de manera eficiente y rápida los servicios relacionados con su bienestar psicologico y emocional. Esta plataforma busca simplificar los procesos de solicitud y acceso a los recursos de apoyo disponibles, contribuyendo a un entorno estudiantil más saludable y favorable para el desarrollo integral.
 
 ---
 
@@ -50,7 +50,7 @@ El alcance del proyecto SerenityLab se centra en la creación de un espacio digi
 Para la creación del proyecto SerenityLab, se han empleado las siguientes tecnologías web fundamentales:
 
 * **HTML (HyperText Markup Language):** Utilizado para la estructuración y organización del contenido de las páginas web.
-* **CSS (Cascading Style Sheets):** Empleado para definir la presentación visual y el diseño de las páginas, incluyendo colores, fuentes,布局 y otros aspectos estéticos.
+* **CSS (Cascading Style Sheets):** Empleado para definir la presentación visual y el diseño de las páginas, incluyendo colores, fuentes y otros aspectos estéticos.
 * **CSS Externo:** Se utilizarán archivos CSS separados del código HTML para mantener una mejor organización y facilitar la gestión de los estilos del sitio web.
 * **Componentes para Separar y Organizar los Estilos:** Se adoptará una metodología de desarrollo CSS basada en componentes para asegurar la modularidad, reutilización y fácil mantenimiento de los estilos a lo largo del proyecto.
 
@@ -73,7 +73,7 @@ La forma de uso de estos servicios será intuitiva y accesible directamente a tr
 El desarrollo del proyecto SerenityLab es llevado a cabo por el siguiente equipo de trabajo:
 
 * **Product Owner:** María José Gutiérrez - (Majo-G22 - responsable de la visión del producto y las prioridades).
-* **Scrum Master:** Juan Andres Moreno (IzasaJuan25 - facilitador del equipo de desarrollo y garante del proceso Scrum).
+* **Scrum Master:** Juan Andres Moreno (IzasaJuan25 - facilitador del equipo de desarrollo y gerente del proceso Scrum).
 * **Equipo de Desarrollo:**
     * Jefferson suaza (Jesuazav - encargado de la implementación técnica).
     * Luisa Yepes (Luisayepes567 - encargada de la implementación técnica).
@@ -85,7 +85,7 @@ El desarrollo del proyecto SerenityLab es llevado a cabo por el siguiente equipo
 
 A continuación, se detalla la estructura y el propósito de los principales componentes del `index.html` y las páginas alternas del proyecto SerenityLab:
 
-**Explicación del `index.html`:**
+**Creación del `index.html`:**
 
 * **`head`:** La sección `<head>` de cada página web incluye links importantes para el navegador y otros servicios. En SerenityLab, se ha agregado el isotipo de la marca a todas las pestañas del navegador. Esto se logra mediante la etiqueta `<link>` con el atributo `href` que especifica la ubicación (URL) del archivo del isotipo.
 
@@ -104,23 +104,59 @@ A continuación, se detalla la estructura y el propósito de los principales com
     * **Ubicación geográfica:** Un encabezado `<h4>` con la clase `"footer__div--h4"` indica "Ubicación geográfica". Se intenta insertar un mapa utilizando la etiqueta `<iframe>`.
     * **Redes sociales:** Un encabezado `<h4>` con la clase `"footer__div--h4"` muestra "Redes sociales". Se utilizan enlaces (`<a>`) con imágenes (`<img>`) de los logos de LinkedIn, Facebook, Instagram y YouTube para dirigir a las páginas correspondientes de cada red social. Cada imagen incluye un texto alternativo descriptivo.
 
-**Explicación de la página de inicio de sesión (`iniciosesion.html`):**
+**Creación de la página de inicio de sesión (`iniciosesion.html`):**
 
-La página de inicio de sesión (`<main>`) utiliza un `div` con la clase `container` para centrar el contenido. Contiene un encabezado `<h1>` con el texto "Inicio de sesión" y un formulario (`<form>` con la clase `login-form`) para recopilar las credenciales del usuario. El formulario incluye:
+Este código HTML estructura una **sección principal** (`<main>`) que contiene dos **formularios** (`<form>`) clave para la interacción del usuario: uno para el **registro** y otro para el **inicio de sesión**.
 
-* Etiquetas (`<label>`) y campos de entrada (`<input type="email">` e `<input type="password">`) para el correo electrónico y la contraseña, respectivamente, con atributos `id` para la vinculación y `placeholder` para la guía del usuario. El campo de contraseña utiliza `type="password"` para ocultar la entrada.
-* Un `div` con la clase `checkbox-container` que contiene un checkbox (`<input type="checkbox" id="remember">`) y su etiqueta (`<label for="remember">`) para la opción "Recuérdame".
-* Un enlace (`<a>`) "¿Olvidaste tu contraseña?" (`href="#"`).
-* Un botón de envío (`<button type="submit">Ingresar</button>`).
+## Formulario de Registro
 
-**Explicación de la sección de perfiles de psicólogos (`psicologos.html`):**
+Este **formulario** (`<form class="login-form-elements">`) está diseñado para que los usuarios creen una nueva cuenta. Incluye campos de entrada (`<input>`) con sus respectivas **etiquetas descriptivas** (`<label>`) para:
+* **Nombre:** Para el nombre completo del usuario.
+* **Perfil:** Para especificar el rol del usuario (Estudiante o Psicólogo).
+* **Contraseña:** Para establecer una contraseña segura.
+La acción se completa con un **botón de envío** (`<button type="submit">`) para registrar la información.
+
+## Formulario de Inicio de Sesión
+
+Este **formulario** (`<form class="login-form-elements">`) permite a los usuarios existentes acceder a la plataforma. Contiene **campos de entrada** (`<input>`) y sus **etiquetas** (`<label>`) para:
+* **Nombre:** Para el nombre de usuario.
+* **Contraseña:** Para la contraseña.
+* **Recuérdame:** Un **checkbox** (`<input type="checkbox">`) para recordar la sesión del usuario.
+
+Además, cuenta con un **enlace** (`<a>`) para usuarios que hayan olvidado su contraseña.
+
+A continuación del formulario, una **sección de selección de rol** (`<div class="roles">`) presenta dos **enlaces de navegación** (`<a>`), cada uno representando una opción de perfil:
+* **Psicólogo:** Un **enlace** que dirige a la página `perfilPsicologo.html`.
+* **Estudiante:** Un **enlace** que dirige a la página `perfilEstudiante.html`.
+
+
+**Creación de las páginas de los perfiles (`perfilEstudiante.html`):**
+**Creación de las páginas de los perfiles (`perfilPsicologo.html`):**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Creación de la sección de perfiles de psicólogos (`psicologos.html`):**
 
 La sección principal (`<main>`) contiene un `div` con la clase `component-container` para el diseño general. Un encabezado `<h2>` con la clase `component-title` muestra "Nuestros profesionales". Los perfiles se organizan en una cuadrícula (`div` con la clase `card-grid`) utilizando Flexbox. Cada perfil se representa con un `<article>` con las clases `card` y `card--minimal`, conteniendo:
 
 * Un `div` con la clase `card__image` que alberga la imagen del psicólogo (`<img>`) con su respectivo `alt`.
 * Un `div` con la clase `card__content` que contiene el título del perfil (`<h3 class="card__title">`), una breve descripción (`<p class="card__description">`) y un enlace "Leer más" (`<a href="#" class="card__button">`).
 
-**Explicación de la página del buzón anónimo (`buzon.html`):**
+**Creación de la página del buzón anónimo (`buzon.html`):**
 
 La página del buzón anónimo (`<main>` con la clase `buzon-contenedor`) contiene una `<section>` con la clase `buzon`. Incluye un encabezado `<h1>` "Buzón Anónimo" y dos párrafos `<p>` que explican el propósito y la confidencialidad del buzón. Un formulario (`<form>`) permite a los usuarios enviar mensajes anónimos a través de:
 
