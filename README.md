@@ -165,10 +165,10 @@ Este uso de etiquetas semánticas aporta estructura clara y accesible, pero pued
 
 * **Para qué sirve**: Este código muestra una sección de la página web donde se presentan los perfiles de varios psicólogos profesionales que forman parte de SerenityLab. 
 
-- Permite a los usuarios conocer la información básica y especialidades de cada psicólogo.
-- Proporciona datos de contacto como correo electrónico y teléfono.
-- Ofrece una descripción personal de cada profesional para generar confianza y cercanía.
-- Incluye una nota adicional que invita al usuario a iniciar sesión para agendar citas con los psicólogos de su interés.
+    - Permite a los usuarios conocer la información básica y especialidades de cada psicólogo.
+    - Proporciona datos de contacto como correo electrónico y teléfono.
+    - Ofrece una descripción personal de cada profesional para generar confianza y cercanía.
+    - Incluye una nota adicional que invita al usuario a iniciar sesión para agendar citas con los psicólogos de su interés.
 
 * **Uso semántico**
 
@@ -192,11 +192,11 @@ Este uso semántico contribuye a una estructura clara, accesible y fácil de int
 * **Para qué sirve**
 Este código crea una sección de **buzón anónimo** para que los usuarios puedan compartir sus pensamientos, emociones o dificultades de manera confidencial y segura en la plataforma SerenityLab. 
 
-- Permite a los usuarios enviar mensajes de forma anónima.
-- Fomenta la expresión libre sin necesidad de identificarse.
-- Ofrece un espacio seguro para la comunicación y la escucha activa.
-- Incluye un formulario con campos para el mensaje principal y una información adicional opcional.
-- Proporciona un botón para enviar el mensaje (aunque en este código es un enlace que redirige a otra página).
+    - Permite a los usuarios enviar mensajes de forma anónima.
+    - Fomenta la expresión libre sin necesidad de identificarse.
+    - Ofrece un espacio seguro para la comunicación y la escucha activa.
+    - Incluye un formulario con campos para el mensaje principal y una información adicional opcional.
+    - Proporciona un botón para enviar el mensaje (aunque en este código es un enlace que redirige a otra página).
 
 * **Uso semántico**
 
@@ -215,14 +215,13 @@ Este uso adecuado de etiquetas semánticas ayuda a estructurar el contenido de m
 
 ***Creación de la página de mensajes enviados (`mensajesEnviados.html`):***
 
-* **Para qué sirve**
-Este fragmento de código crea una página de confirmación que informa al usuario que su mensaje fue enviado exitosamente a través de la plataforma SerenityLab. Sirve para:
+* **Para qué sirve**: Este fragmento de código crea una página de confirmación que informa al usuario que su mensaje fue enviado exitosamente a través de la plataforma SerenityLab. Sirve para:
 
-- Confirmar que el mensaje fue recibido correctamente.
-- Mostrar el contenido enviado para que el usuario pueda revisarlo.
-- Informar que debe esperar la respuesta del profesional.
-- Reforzar la confianza en el servicio anónimo y seguro.
-- Ofrecer enlaces para volver al buzón de mensajes o a la página principal, facilitando la navegación.
+    - Confirmar que el mensaje fue recibido correctamente.
+    - Mostrar el contenido enviado para que el usuario pueda revisarlo.
+    - Informar que debe esperar la respuesta del profesional.
+    - Reforzar la confianza en el servicio anónimo y seguro.
+    - Ofrecer enlaces para volver al buzón de mensajes o a la página principal, facilitando la navegación.
 
 * **Uso semántico**
 
