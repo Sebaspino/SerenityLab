@@ -1,0 +1,179 @@
+/*
+ * Estilos Generales
+ * Estos estilos se aplican a toda la página y configuran el diseño básico, la fuente y el fondo.
+ */
+main {
+  margin: 0;
+  font-family: 'Garamond', serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  font-weight: bold;
+}
+
+/*
+ * Estilos del Contenedor Principal
+ * Esta sección define el diseño para el contenedor principal de los elementos,
+ * permitiendo una organización flexible de las tarjetas y formularios.
+ */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+  gap: 2rem; /* Espacio entre los elementos */
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  width: 90%; /* Ajuste para que no ocupe todo el ancho en pantallas muy grandes, pero sea responsivo */
+  align-items: stretch; /* ¡CLAVE! Hace que todos los elementos flexibles dentro de .contenedor
+                           tengan la misma altura que el elemento más alto en esa fila. */
+}
+
+/*
+ * Estilos para las Tarjetas de Perfil
+ * Estilos para las tarjetas de perfil individuales, incluyendo fondo, sombra y diseño interno.
+ */
+.tarjeta-perfil {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center; /* Alinea los ítems (imagen y texto) al centro verticalmente */
+  justify-content: center; /* Centra los ítems horizontalmente */
+  gap: 1rem;
+  flex: 1; /* Permite que la tarjeta crezca y se encoja dentro del contenedor */
+  min-width: 480px; /* Ancho mínimo para la tarjeta, ajustado para pantallas medianas */
+  /* Quitamos 'height: 300px;' aquí para que 'align-items: stretch' en .contenedor
+     pueda hacer su trabajo y ambos contenedores tengan la misma altura dinámica. */
+}
+
+.tarjeta-perfil p {
+  font-size: larger;
+  font-weight: 900; /* Letra muy negrita para mayor claridad */
+  color: #333; /* Color oscuro para un buen contraste */
+}
+
+.tarjeta-perfil img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info h2 {
+  margin: 0;
+  color: #4b79a1;
+}
+
+/*
+ * Estilos para el Formulario de Disponibilidad
+ * Estilos específicos para el formulario de agendamiento,
+ * incluyendo su fondo, relleno y sombra.
+ */
+.formulario-disponibilidad {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Permite que el formulario crezca y se encoja dentro del contenedor */
+  min-width: 480px; /* Ancho mínimo para el formulario, coincidiendo con la tarjeta */
+  /* No necesitamos un 'height' fijo aquí, ya que 'align-items: stretch' lo igualará a la tarjeta. */
+}
+
+.formulario-disponibilidad h2 {
+  color: #4b79a1;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Estilos para Elementos del Formulario
+ * Estilos generales para las etiquetas (labels), campos de entrada y la lista desplegable (select).
+ */
+label {
+  display: block; /* Cada label en su propia línea */
+  font-size: larger;
+  font-weight: 900; /* Letra muy negrita, como los párrafos */
+  color: #333; /* Color oscuro */
+  margin-bottom: 0.5rem; /* Menor margen para acercar a su input/select */
+  margin-top: 1rem; /* Espacio superior para separar del elemento anterior */
+}
+
+input[type="datetime-local"],
+select {
+  font-family: 'Garamond', serif;
+  width: 90%; /* Ocupa la mayor parte del ancho disponible */
+  height: 45px; /* Altura generosa para mejor visibilidad */
+  padding: 0.75rem 1rem; /* Relleno interno, con más espacio horizontal para el texto */
+  font-size: 1.1rem; /* Tamaño de fuente estándar */
+  border: 2px solid #4b79a1; /* Borde con color de la marca */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: white; /* Asegura un fondo blanco para el campo */
+  color: #333; /* Color de texto oscuro para visibilidad */
+  appearance: none; /* Elimina estilos por defecto del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+}
+
+select {
+  /* Flecha personalizada para el select si se eliminó la nativa */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%234b79a1%22%20d%3D%22M287%20197.915L146.2%2057.115%205.4%20197.915c-3.6%203.6-5.6%207.8-5.6%2012.2s2%208.6%205.6%2012.2c3.6%203.6%207.8%205.6%2012.2%205.6s8.6-2%2012.2-5.6l116.6-116.6%20116.6%20116.6c3.6%203.6%207.8%205.6%2012.2%205.6s8.6-2%2012.2-5.6c3.6-3.6%205.6-7.8%205.6-12.2s-2-8.6-5.6-12.2z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.7em center; /* Posiciona la flecha a la derecha, centrada verticalmente */
+  background-size: 0.65em auto; /* Tamaño de la flecha */
+  padding-right: 2.5em; /* Espacio extra a la derecha para que la flecha no tape el texto */
+  /* Si el texto de las opciones aún se corta al abrir el desplegable,
+     las siguientes propiedades pueden ayudar (aunque el control es limitado en CSS puro): */
+  white-space: nowrap; /* Intenta mantener el texto en una sola línea en la visualización principal */
+  overflow: hidden; /* Oculta el texto que excede el ancho si nowrap lo causa */
+  text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+}
+
+/*
+ * Estilos para los Botones
+ * Estilos para los botones de acción, incluyendo su diseño, apariencia y efectos al pasar el ratón.
+ */
+.botones {
+  display: flex;
+  gap: 2rem; /* Espacio entre los botones */
+  margin-top: 1.5rem; /* Margen superior para separar de los campos del formulario */
+  justify-content: center; /* Centra los botones dentro de su contenedor */
+}
+
+button {
+  background-color: #4b79a1;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #355c7d;
+  transform: scale(1.03); /* Ligeramente más grande al pasar el ratón */
+}
+
+.btn-finalizar {
+  background-color: #fd3085; /* Color diferente y llamativo para "Finalizar" */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-finalizar:hover {
+  background-color: #e02a78; /* Un tono un poco más oscuro al pasar el ratón */
+  transform: scale(1.03);
+}
