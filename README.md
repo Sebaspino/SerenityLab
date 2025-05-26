@@ -85,7 +85,7 @@ El desarrollo del proyecto SerenityLab es llevado a cabo por el siguiente equipo
 
 A continuación, se detalla la estructura y el propósito de los principales componentes del `index.html` y las páginas alternas del proyecto SerenityLab:
 
-**Creación del `index.html`:**
+***Creación del `index.html`:***
 
 * **`head`:** La sección `<head>` de cada página web incluye links importantes para el navegador y otros servicios. En SerenityLab, se ha agregado el isotipo de la marca a todas las pestañas del navegador. Esto se logra mediante la etiqueta `<link>` con el atributo `href` que especifica la ubicación (URL) del archivo del isotipo.
 
@@ -104,63 +104,146 @@ A continuación, se detalla la estructura y el propósito de los principales com
     * **Ubicación geográfica:** Un encabezado `<h4>` con la clase `"footer__div--h4"` indica "Ubicación geográfica". Se intenta insertar un mapa utilizando la etiqueta `<iframe>`.
     * **Redes sociales:** Un encabezado `<h4>` con la clase `"footer__div--h4"` muestra "Redes sociales". Se utilizan enlaces (`<a>`) con imágenes (`<img>`) de los logos de LinkedIn, Facebook, Instagram y YouTube para dirigir a las páginas correspondientes de cada red social. Cada imagen incluye un texto alternativo descriptivo.
 
-**Creación de la página de inicio de sesión (`iniciosesion.html`):**
+***Creación de la página de inicio de sesión (`iniciosesion.html`):***
 
-Este código HTML estructura una **sección principal** (`<main>`) que contiene dos **formularios** (`<form>`) clave para la interacción del usuario: uno para el **registro** y otro para el **inicio de sesión**.
+## Para qué sirve
+Este código proporciona dos formularios principales en la misma página para:
 
-## Formulario de Registro
+* **Registro de usuarios**  
+   - Permite que nuevos usuarios se registren ingresando su nombre, perfil (Estudiante o Psicólogo) y una contraseña.
 
-Este **formulario** (`<form class="login-form-elements">`) está diseñado para que los usuarios creen una nueva cuenta. Incluye campos de entrada (`<input>`) con sus respectivas **etiquetas descriptivas** (`<label>`) para:
-* **Nombre:** Para el nombre completo del usuario.
-* **Perfil:** Para especificar el rol del usuario (Estudiante o Psicólogo).
-* **Contraseña:** Para establecer una contraseña segura.
-La acción se completa con un **botón de envío** (`<button type="submit">`) para registrar la información.
+* **Inicio de sesión**  
+   - Permite a usuarios ya registrados ingresar su nombre y contraseña para acceder al sistema.  
+   - Incluye opción de "Recuérdame" para mantener la sesión activa.  
+   - Enlace para recuperar la contraseña si se olvida.  
+   - Botones con enlaces para ingresar directamente a perfiles específicos según el rol: Psicólogo o Estudiante.
 
-## Formulario de Inicio de Sesión
+## Uso semántico del contenido
 
-Este **formulario** (`<form class="login-form-elements">`) permite a los usuarios existentes acceder a la plataforma. Contiene **campos de entrada** (`<input>`) y sus **etiquetas** (`<label>`) para:
-* **Nombre:** Para el nombre de usuario.
-* **Contraseña:** Para la contraseña.
-* **Recuérdame:** Un **checkbox** (`<input type="checkbox">`) para recordar la sesión del usuario.
+- `<main>`: Contiene el contenido principal de la página (registro e inicio de sesión).
+- `<div class="container">`: Agrupa visualmente cada sección (registro y login)
+- `<h1>`: Títulos principales de cada sección para indicar claramente la función (Registrate, Inicio de sesión).
+- `<form>`: Elemento semántico para agrupar campos de entrada y acciones relacionadas con formularios.
+- `<label>` y `<input>`: Se usan correctamente para asociar cada campo de entrada con su descripción, mejorando accesibilidad.
+- `aria-labelledby`: Intenta mejorar accesibilidad, pero se debería usar un `id` único para cada formulario y que coincida con el atributo, aquí ambos usan "login-heading" lo cual no es correcto.
+- `<button>`: Botón para enviar el formulario de registro.
+- `<a>`: Enlaces para recuperación de contraseña y para seleccionar perfil (rol).
 
-Además, cuenta con un **enlace** (`<a>`) para usuarios que hayan olvidado su contraseña.
+Este código es funcional para registro e inicio de sesión, con una estructura básica y buena intención semántica, pero con algunos detalles para mejorar en accesibilidad y mejores prácticas HTML.
 
-A continuación del formulario, una **sección de selección de rol** (`<div class="roles">`) presenta dos **enlaces de navegación** (`<a>`), cada uno representando una opción de perfil:
-* **Psicólogo:** Un **enlace** que dirige a la página `perfilPsicologo.html`.
-* **Estudiante:** Un **enlace** que dirige a la página `perfilEstudiante.html`.
+***Creación de las páginas de los perfiles (`perfilEstudiante.html`):***
+***Creación de las páginas de los perfiles (`perfilPsicologo.html`):***
 
+## Para qué sirve
 
-**Creación de las páginas de los perfiles (`perfilEstudiante.html`):**
-**Creación de las páginas de los perfiles (`perfilPsicologo.html`):**
+1. **Perfil del estudiante con formulario para agendar cita**  
+   - Muestra información básica del estudiante (nombre, rol, descripción).  
+   - Permite al estudiante seleccionar un psicólogo y elegir fecha y hora para agendar una cita.  
+   - Incluye botones para guardar la cita o volver al inicio.
 
+2. **Perfil del psicólogo con formulario para registrar disponibilidad**  
+   - Muestra información del psicólogo (nombre, especialidad, enfoque).  
+   - Permite al psicólogo registrar sus horarios disponibles para citas.  
+   - Incluye botones para guardar la disponibilidad o finalizar y volver al inicio.
 
+Estas dos secciones facilitan la interacción entre estudiantes y psicólogos dentro de la plataforma, gestionando citas y disponibilidad.
 
+## Uso semántico del contenido
 
+- `<main>`: Marca el contenido principal del documento.
 
+- `<div class="contenedor">`: Contenedor general para organizar el contenido visualmente
 
+- `<div class="tarjeta-perfil">`: Agrupa la información del perfil con imagen y datos descriptivos.
 
+- `<img>`: Imagen de perfil con texto alternativo para accesibilidad.
 
+- `<h2>`: Títulos secundarios que indican el nombre del estudiante o psicólogo.
 
+- `<p>`: Párrafos que describen roles, especialidades o información relevante.
 
+- `<form>`: Área interactiva donde se recogen datos para agendar cita o registrar disponibilidad.
 
+- `<label>` y `<select>` / `<input>`: Asociados para mejorar la accesibilidad y describir claramente cada campo del formulario.
 
+- `<button>`: Botones para enviar datos o realizar acciones.
 
+- `<a>` con botones dentro es funcional, pero no es lo más semántico; sería mejor usar solo `<button>` para acciones y `<a>` para enlaces.
 
+Este uso de etiquetas semánticas aporta estructura clara y accesible, pero puede ser mejorado para cumplir con las buenas prácticas web.
 
+***Creación de la sección de perfiles de psicólogos (`psicologos.html`):***
 
+## Para qué sirve
+Este código muestra una sección de la página web donde se presentan los perfiles de varios psicólogos profesionales que forman parte de SerenityLab. 
 
-**Creación de la sección de perfiles de psicólogos (`psicologos.html`):**
+- Permite a los usuarios conocer la información básica y especialidades de cada psicólogo.
+- Proporciona datos de contacto como correo electrónico y teléfono.
+- Ofrece una descripción personal de cada profesional para generar confianza y cercanía.
+- Incluye una nota adicional que invita al usuario a iniciar sesión para agendar citas con los psicólogos de su interés.
 
-La sección principal (`<main>`) contiene un `div` con la clase `component-container` para el diseño general. Un encabezado `<h2>` con la clase `component-title` muestra "Nuestros profesionales". Los perfiles se organizan en una cuadrícula (`div` con la clase `card-grid`) utilizando Flexbox. Cada perfil se representa con un `<article>` con las clases `card` y `card--minimal`, conteniendo:
+## Uso semántico
 
-* Un `div` con la clase `card__image` que alberga la imagen del psicólogo (`<img>`) con su respectivo `alt`.
-* Un `div` con la clase `card__content` que contiene el título del perfil (`<h3 class="card__title">`), una breve descripción (`<p class="card__description">`) y un enlace "Leer más" (`<a href="#" class="card__button">`).
+- `<section>`: Utilizado para agrupar contenido relacionado temáticamente.  
+  - El primer `<section>` contiene el título general de la sección ("Nuestros profesionales - Psicólogos").  
+  - El último `<section>` incluye una nota adicional informativa para el usuario.
+- `<main>`: Contiene el conjunto principal de tarjetas que muestran cada perfil de psicólogo, indicando que este es el contenido principal de la página referente a los profesionales.
+- `<div class="therapist-card">`: Cada tarjeta representa un perfil individual
 
-**Creación de la página del buzón anónimo (`buzon.html`):**
+- `<h1>` y `<h3>`:  
+  - `<h1>` para el título principal de la sección.  
+  - `<h3>` para los nombres de los psicólogos, actuando como subtítulos dentro de cada tarjeta.
 
-La página del buzón anónimo (`<main>` con la clase `buzon-contenedor`) contiene una `<section>` con la clase `buzon`. Incluye un encabezado `<h1>` "Buzón Anónimo" y dos párrafos `<p>` que explican el propósito y la confidencialidad del buzón. Un formulario (`<form>`) permite a los usuarios enviar mensajes anónimos a través de:
+- `<p>`: Párrafos para roles, especialidades, descripciones y datos de contacto.
+- Uso de `alt` en imágenes (`<img>`) para accesibilidad, describiendo la foto del psicólogo.
 
-* Un área de texto obligatoria para el mensaje principal (`<textarea id="mensaje" name="mensaje" rows="5" placeholder="..." required>`) con su respectiva etiqueta (`<label for="mensaje">`).
-* Un área de texto opcional para información adicional (`<textarea id="info" name="info" rows="3" placeholder="...">`) con su etiqueta (`<label for="info">`).
-* Un botón de envío (`<button type="submit">Enviar</button>`).
-* Un párrafo de agradecimiento (`<p class="thank-you">`) que se mostrará tras el envío.
+Este uso semántico contribuye a una estructura clara, accesible y fácil de interpretar tanto para usuarios como para motores de búsqueda y lectores de pantalla.
+
+***Creación de la página del buzón anónimo (`buzon.html`):***
+
+## Para qué sirve
+Este código crea una sección de **buzón anónimo** para que los usuarios puedan compartir sus pensamientos, emociones o dificultades de manera confidencial y segura en la plataforma SerenityLab. 
+
+- Permite a los usuarios enviar mensajes de forma anónima.
+- Fomenta la expresión libre sin necesidad de identificarse.
+- Ofrece un espacio seguro para la comunicación y la escucha activa.
+- Incluye un formulario con campos para el mensaje principal y una información adicional opcional.
+- Proporciona un botón para enviar el mensaje (aunque en este código es un enlace que redirige a otra página).
+
+## Uso semántico
+
+- `<main>`: Marca el contenido principal de la página, indicando el foco principal del documento.
+- `<section>`: Agrupa un bloque temático, en este caso todo lo relacionado con el buzón anónimo.
+- `<h1>`: Título principal que identifica el propósito de la sección ("Buzón Anónimo").
+- `<p>`: Párrafos para describir la finalidad y condiciones del buzón (confidencialidad y apoyo).
+- `<form>`: Contenedor del formulario donde el usuario ingresa la información.
+- `<label>`: Etiquetas descriptivas para los campos del formulario, mejorando accesibilidad.
+- `<textarea>`: Campos para que el usuario escriba su mensaje principal y una información adicional opcional.
+- `<div class="boton-contenedor">`: Organización visual del botón.
+- `<a>` con clase estilizada como botón para enviar (aunque idealmente debería ser un `<button type="submit">` para mejor semántica).
+- `<p class="thank-you">`: Mensaje de agradecimiento para el usuario.
+
+Este uso adecuado de etiquetas semánticas ayuda a estructurar el contenido de manera lógica y accesible, facilitando la comprensión para usuarios y tecnologías asistivas.
+
+***Creación de la página de mensajes enviados (`mensajesEnviados.html`):***
+
+## Para qué sirve
+Este fragmento de código crea una página de confirmación que informa al usuario que su mensaje fue enviado exitosamente a través de la plataforma SerenityLab. Sirve para:
+
+- Confirmar que el mensaje fue recibido correctamente.
+- Mostrar el contenido enviado para que el usuario pueda revisarlo.
+- Informar que debe esperar la respuesta del profesional.
+- Reforzar la confianza en el servicio anónimo y seguro.
+- Ofrecer enlaces para volver al buzón de mensajes o a la página principal, facilitando la navegación.
+
+## Uso semántico
+
+- `<main>`: Define el contenido principal de la página, ayudando a los lectores de pantalla y motores de búsqueda a entender el foco principal.
+- `<section>`: Agrupa el contenido relacionado, en este caso todo lo relativo a la confirmación del mensaje enviado.
+- `<h1>`: Título principal que indica el éxito del envío del mensaje.
+- `<p>`: Párrafos que describen mensajes de agradecimiento, detalles del mensaje enviado y explicaciones al usuario.
+- `<strong>`: Resalta partes importantes del texto, como etiquetas "Tu mensaje" e "Información adicional".
+- `<div>` con clases específicas para organizar visualmente el mensaje enviado y los botones de navegación.
+- `<a>`: Enlaces para navegación, con clases para estilizar botones.
+
+Este uso adecuado de etiquetas semánticas mejora la accesibilidad, estructura el contenido de forma lógica y facilita la comprensión tanto para humanos como para máquinas.
