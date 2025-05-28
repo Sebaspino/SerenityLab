@@ -7,9 +7,8 @@
 5.  **Alcance:**
 6.  **Herramientas Utilizadas:**
 7.  **Servicios Ofrecidos:**
-8.  **Como Usar:**
-9.  **Autores:**
-10. **Sustentación de Creación del Index y Páginas Alternas:**
+8.  **Autores:**
+9. **Sustentación de Creación del Index y Páginas Alternas:**
 
 ---
 
@@ -19,7 +18,7 @@ SerenityLab es un portal académico diseñado específicamente para promover y a
 
 ---
 
-## 2. Justificación del Proyecto: Facilitando el acceso a servicios de bienestar para estudiantes del CESDE
+## 2. Justificación del Proyecto: Facilitar el acceso a servicios de bienestar para estudiantes del CESDE
 
 La implementación de SerenityLab se justifica por la necesidad de facilitar un acceso directo y sencillo a los servicios de bienestar estudiantil que ofrece la institución CESDE. Al centralizar estos recursos en una plataforma digital, se busca promover una experiencia académica más equitativa, eficiente y centrada en el bienestar integral de los estudiantes. Si bien la institución ya ofrece apoyo psicológico, el acceso actual a través de líneas telefónicas, correo electrónico o visitas presenciales a la dependencia en Medellín presenta limitaciones en términos de agilidad y eficiencia. SerenityLab busca optimizar este proceso, facilitando el acceso a los servicios de manera más rápida y cómoda para los estudiantes.
 
@@ -76,7 +75,7 @@ El desarrollo del proyecto SerenityLab es llevado a cabo por el siguiente equipo
 * **Scrum Master:** Juan Andres Moreno (IzasaJuan25 - facilitador del equipo de desarrollo y gerente del proceso Scrum).
 * **Equipo de Desarrollo:**
     * Jefferson suaza (Jesuazav - encargado de la implementación técnica).
-    * Luisa Yepes (Luisayepes567 - encargada de la implementación técnica).
+    * Luisa Yepez (Luisayepez567 - encargada de la implementación técnica).
     * Sebastian Pino (Sebaspino - encargado de la implementación técnica).
 
 ---
