@@ -1,23 +1,23 @@
 body {
-    font-family: 'Garamond', serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-color: #ffe6f4;
-    color: #333;
+    color: var(--texto-dark);
 }
 
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: var(--font-size-xxl);
 }
 
 header {
-    background-color: #ee49a4; /*Rosado similiar al de la tematica que venimos aplicando para el proyecto de serenity*/
+    background-color: var(--color-primary); /*Rosado similiar al de la tematica que venimos aplicando para el proyecto de serenity*/
     padding: 5px;
     text-align: center;
-    font-size: 2em;
+    font-size: var(--font-size-xxl);
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--color-secundary);
 }
 
 .therapist-grid {
@@ -31,7 +31,7 @@ header {
 
 .therapist-card {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: var(--border-radius-md);
     box-shadow: 0 2px 5px #f123951a;
     padding: 20px;
     text-align: center;
@@ -68,7 +68,7 @@ header {
 }
 
 .therapist-card .description {
-    font-size: 1.1em;
+    font-size: var(--font-size-md);
     color: #000000;
     line-height: 1.5;
     text-align: justify; /* Alinea el texto de la descripción a la izquierda */
@@ -97,9 +97,9 @@ header {
    margin-left: auto;
    margin-right: auto;
    max-width: 800px; /* Ancho máximo del cuadro */
-   border-radius: 5px;
+   border-radius: var(--border-radius-sm);
    color: #ffffff;
-   font-size: 1em;
+   font-size: var(--font-size-md);
 }
 
 /* Media Queries para responsividad */

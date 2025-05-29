@@ -5,8 +5,8 @@
 }
 
 .about h1 {
-  font-family: 'Garamond', serif;
-  font-size: 2rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xxl);
   /* Un tamaño más moderno para el encabezado */
   color: rgb(238, 44, 130);
   margin-top: 0;
@@ -15,12 +15,12 @@
 }
 
 .about p {
-  font-size: 1.13rem;
+  font-size: var(--font-size-md);;
   /* Un tamaño de párrafo más legible */
   line-height: 1.7;
   /* Mejora la legibilidad de párrafos largos */
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--texto-dark);
   /* Un color de texto un poco más suave */
 }
 
@@ -36,9 +36,9 @@
 }
 
 .services h2 {
-  font-family: 'Garamond', serif;
-  color: #333;
-  font-size: 2rem;
+  font-family: var(--font-family);
+  color: var(--texto-dark);
+  font-size: var(--font-size-xxl);
 }
 
 .service-cards {
@@ -53,7 +53,7 @@
 
 .service-cards__card {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: var(--border-radius-md);
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   /* Sombra ligeramente más pronunciada */
@@ -62,7 +62,7 @@
   flex: 1 1 300px;
   /* Permite que crezcan y se encojan */
   text-align: center;
-  color: #333;
+  color: var(--texto-dark);
   /* Color de texto para las tarjetas */
 }
 
@@ -79,14 +79,14 @@
 }
 
 .service-cards__card--h3 {
-  font-size: 1.13rem;
+  font-size: var(--font-size-md);;
   margin-bottom: 0.8rem;
   color: rgb(238, 44, 130);
   /* Color del título del servicio */
 }
 
 .service-cards__card--p {
-  font-size: 1rem;
+  font-size: var(--font-size-md);;
   line-height: 1.6;
 }
 
@@ -100,7 +100,7 @@
   gap: 1.5rem;
   background-color: #ffffff;
   /* Un fondo más oscuro para el pie de página */
-  color: #333;
+  color: var(--texto-dark);
   /* Texto claro en el pie de página */
   padding: 2rem;
   text-align: left;
@@ -112,10 +112,10 @@
 }
 
 .footer__div--h4 {
-  font-family: 'Garamond', serif;
-  font-size: 1rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);;
   margin-bottom: 0.8rem;
-  color: #333;
+  color: var(--texto-dark);
   /* Un color ligeramente más claro para los títulos */
 }
 
@@ -128,8 +128,8 @@
 }
 
 .footer__div--a {
-  font-size: 1rem;
-  color: #f8f8f8;
+  font-size: var(--font-size-md);
+  color: var(--color-secundary);
   text-decoration: none;
   display: block;
   /* Para que los enlaces ocupen todo el ancho y sean más fáciles de tocar */
@@ -174,7 +174,7 @@
     /* Coloca el menú debajo del encabezado */
     left: 0;
     right: 0;
-    background-color: #f8f8f8;
+    background-color: var(--color-secundary);
     flex-direction: column;
     align-items: center;
     padding: 1rem;
@@ -192,7 +192,7 @@
   }
 
   .header__nav--a {
-    font-size: 1.1rem;
+    font-size: var(--font-size-md);
   }
 
   .hero {
@@ -202,7 +202,7 @@
   }
 
   .hero__container--text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-xl);
   }
 }
 
@@ -226,14 +226,14 @@
 
 @media (max-width: 576px) {
   .about__h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-xxxl);
   }
 
   .about__p {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);;
   }
 
   .service__h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-xxl);
   }
 }

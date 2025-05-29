@@ -5,9 +5,9 @@
   justify-content: space-around;
   /* Distribuye mejor los elementos */
   gap: 1.5rem;
-  background-color: #f8f8f8;
+  background-color: var(--color-secundary);
   /* Un fondo más oscuro para el pie de página */
-  color: #333;
+  color: var(--texto-dark);
   /* Texto claro en el pie de página */
   padding: 2rem;
   text-align: left;
@@ -19,10 +19,10 @@
 }
 
 .footer__div--h4 {
-  font-family: 'Garamond', serif;
-  font-size: 1rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);;
   margin-bottom: 0.8rem;
-  color: #333;
+  color: var(--texto-dark);
   /* Un color ligeramente más claro para los títulos */
 }
 
@@ -35,17 +35,13 @@
 }
 
 .footer__div--a {
-  font-size: 1rem;
-  color: #f8f8f8;
+  font-size: var(--font-size-md);;
+  color: var(--color-secundary);
   text-decoration: none;
   display: block;
   /* Para que los enlaces ocupen todo el ancho y sean más fáciles de tocar */
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
-}
-
-.footer__div--a:hover {
-  color: rgb(238, 44, 130);
 }
 
 .footer__iframe {

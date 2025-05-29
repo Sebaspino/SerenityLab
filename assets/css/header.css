@@ -6,7 +6,7 @@
   padding: 1rem 2rem;
   position: relative;
   /* Para posicionar elementos absolutos dentro */
-  background-color: #f8f8f8;
+  background-color: var(--color-secundary);
   /* Un fondo sutil para el encabezado */
 }
 
@@ -42,15 +42,15 @@
 
 .header__nav--a {
   text-decoration: none;
-  color: #333;
+  color: var(--texto-dark);
   font-weight: 500;
-  font-size: 1.13rem;
+  font-size: var(--font-size-md);;
   /* Un tamaño de fuente más estándar */
   transition: color 0.3s ease;
   /* Añade una transición suave al pasar el ratón */
 }
 
 .header__nav--a:hover {
-  color: rgb(238, 44, 130);
+  color: var(--color-primary);
   /* Cambia de color al pasar el ratón */
 }

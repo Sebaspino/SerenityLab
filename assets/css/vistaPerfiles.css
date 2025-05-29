@@ -4,7 +4,7 @@
  */
 main {
   margin: 0;
-  font-family: 'Garamond', serif;
+  font-family: var(--font-family);
   background: linear-gradient(to right, #f5f7fa, #c3cfe2);
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ main {
  */
 .tarjeta-perfil {
   background-color: white;
-  border-radius: 15px;
+  border-radius: var(--border-radius-xxl);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   display: flex;
@@ -50,7 +50,7 @@ main {
 .tarjeta-perfil p {
   font-size: larger;
   font-weight: 900; /* Letra muy negrita para mayor claridad */
-  color: #333; /* Color oscuro para un buen contraste */
+  color: var(--texto-dark); /* Color oscuro para un buen contraste */
 }
 
 .tarjeta-perfil img {
@@ -62,7 +62,7 @@ main {
 
 .info h2 {
   margin: 0;
-  color: #4b79a1;
+  color: var(--texto-profile);
 }
 
 /*
@@ -71,9 +71,9 @@ main {
  * incluyendo su fondo, relleno y sombra.
  */
 .formulario-disponibilidad {
-  background-color: white;
+  background-color: var(--color-secundary);
   padding: 1.5rem;
-  border-radius: 15px;
+  border-radius: var(--border-radius-xxl);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   flex: 1; /* Permite que el formulario crezca y se encoja dentro del contenedor */
   min-width: 480px; /* Ancho mínimo para el formulario, coincidiendo con la tarjeta */
@@ -81,7 +81,7 @@ main {
 }
 
 .formulario-disponibilidad h2 {
-  color: #4b79a1;
+  color: var(--texto-profile);
   margin-bottom: 1rem;
 }
 
@@ -93,23 +93,23 @@ label {
   display: block; /* Cada label en su propia línea */
   font-size: larger;
   font-weight: 900; /* Letra muy negrita, como los párrafos */
-  color: #333; /* Color oscuro */
+  color: var(--texto-dark); /* Color oscuro */
   margin-bottom: 0.5rem; /* Menor margen para acercar a su input/select */
   margin-top: 1rem; /* Espacio superior para separar del elemento anterior */
 }
 
 input[type="datetime-local"],
 select {
-  font-family: 'Garamond', serif;
+  font-family: var(--font-family);
   width: 90%; /* Ocupa la mayor parte del ancho disponible */
   height: 45px; /* Altura generosa para mejor visibilidad */
   padding: 0.75rem 1rem; /* Relleno interno, con más espacio horizontal para el texto */
-  font-size: 1.1rem; /* Tamaño de fuente estándar */
-  border: 2px solid #4b79a1; /* Borde con color de la marca */
-  border-radius: 10px;
+  font-size: var(--font-size-md); /* Tamaño de fuente estándar */
+  border: 2px solid var(--texto-profile); /* Borde con color de la marca */
+  border-radius: var(--border-radius-lg);
   margin-bottom: 1rem;
-  background-color: white; /* Asegura un fondo blanco para el campo */
-  color: #333; /* Color de texto oscuro para visibilidad */
+  background-color: var(--color-secundary); /* Asegura un fondo blanco para el campo */
+  color: var(--texto-dark); /* Color de texto oscuro para visibilidad */
   appearance: none; /* Elimina estilos por defecto del navegador */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -143,16 +143,16 @@ select {
 }
 
 button {
-  background-color: #4b79a1;
-  color: white;
+  background-color: var(--texto-profile);
+  color: var(--color-secundary);
   padding: 1rem 2rem;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
 }
 
 button:hover {
@@ -161,12 +161,12 @@ button:hover {
 }
 
 .btn-finalizar {
-  background-color: #fd3085; /* Color diferente y llamativo para "Finalizar" */
-  color: white;
+  background-color: var(--color-primary); /* Color diferente y llamativo para "Finalizar" */
+  color: var(--color-secundary);
   padding: 1rem 2rem;
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;

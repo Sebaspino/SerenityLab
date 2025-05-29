@@ -1,0 +1,29 @@
+:root {
+    /* tipo de letra */
+    --font-family: 'Garamond', serif;
+
+    /* colores de diseño */
+    --color-primary: rgb(238, 44, 130);
+    --color-secundary: rgb(255, 255, 255);
+
+    /* colores de texto */
+    --texto-dark: rgb(51, 51, 51);
+    --texto-profile: rgb(75, 121, 161);
+
+    /* Tamaños de fuente */
+    --font-size-sm: 1rem;       /* 16px */
+    --font-size-md: 1.25rem;    /* 20px */
+    --font-size-lg: 1.50rem;    /* 24px */
+    --font-size-xl: 1.75rem;    /* 28px */
+    --font-size-xxl: 2rem;      /* 32px */
+    --font-size-xxxl: 2.5rem;   /* 40px */
+
+    /* Bordes y radios */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 12px;
+    --border-radius-xxl: 16px;
+    --border-width: 1px;
+
+}

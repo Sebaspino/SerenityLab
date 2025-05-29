@@ -34,7 +34,7 @@
 
 .login-form-elements label {
     align-self: flex-start; /* Alinea las etiquetas a la izquierda */
-    font-size: 1.1em;
+    font-size: var(--font-size-md);
     font-weight: 500;
     color: #fff; /* Asegura que las etiquetas sean visibles */
 }
@@ -45,10 +45,10 @@
     width: 100%; /* Ocupa el ancho completo de la columna */
     padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius-md);
     background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    font-size: 1rem;
+    color: var(--texto-dark);
+    font-size: var(--font-size-md);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,7 +73,7 @@
 #forgot-password-link {
     color: #ffdd57; /* Un color que contraste para el enlace */
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
     transition: color 0.3s ease;
 }
 
@@ -85,11 +85,11 @@
 .login-form-elements button[type="submit"] {
     display: inline-block;
     background: linear-gradient(135deg, #ee2cce, #f29efd);
-    color: white;
+    color: var(--color-secundary);
     padding: 0.9rem 2.2rem;
     border: none;
     border-radius: 50px;
-    font-size: 1.05rem;
+    font-size: var(--font-size-md);
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
@@ -106,13 +106,13 @@
 
 
 h1 {
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: var(--font-size-xxxl);
+    color: var(--color-secundary);
 }
 
 p {
-    font-size: 22px;
-    color: #eee;
+    font-size: var(--font-size-xl);
+    color: var(--color-secundary);;
 }
 
 .roles {
@@ -125,11 +125,11 @@ p {
 .rol-card {
     background-color: #ffffff20;
     padding: 20px 30px;
-    border-radius: 12px;
+    border-radius: var(--border-radius-xl);
     text-decoration: none;
-    color: #fff;
+    color: var(--color-secundary);
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--font-size-lg);
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     min-width: 120px; /* Ancho mínimo para los botones de rol */
@@ -164,16 +164,16 @@ p {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: var(--font-size-xxl);
     }
 
     p {
-        font-size: 18px;
+        font-size: var(--font-size-md);
     }
 
     .rol-card {
         padding: 15px 20px;
-        font-size: 18px;
+        font-size: var(--font-size-md);
     }
 }
 
@@ -183,7 +183,7 @@ p {
     }
 
     .login-form-elements label {
-        font-size: 1em;
+        font-size: var(--font-size-md);
     }
 
     .login-form-elements input {

@@ -31,16 +31,16 @@
 /* --- Estilos para la Tarjeta Principal del Buzón (Aplicado a ambas páginas) --- */
 .buzon {
     padding: 3rem 2.5rem;
-    background: white;
-    border-radius: 16px;
+    background: var(--color-secundary);
+    border-radius: var(--border-radius-xxl);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     max-width: 650px; /* Un ancho máximo consistente */
     width: 100%;
     position: relative; /* Para el pseudo-elemento de la barra lateral */
     overflow: hidden;
     transition: transform 0.3s ease;
-    font-family: 'Garamond', serif; /* Tipo de letra general para el buzón */
-    color: #34495e; /* Color de texto general */
+    font-family: var(--font-family); /* Tipo de letra general para el buzón */
+    color: var(--texto-dark) /* Color de texto general */
 }
 
 .buzon:hover {
@@ -55,12 +55,12 @@
     left: 0;
     width: 6px;
     height: 100%;
-    background: linear-gradient(to bottom, #ee2c82, #f85eab);
+    background: linear-gradient(to bottom, var(--color-primary), #f85eab);
 }
 
 /* --- Estilos para Encabezados dentro del Buzón (Aplicado a ambas páginas) --- */
 .buzon h1 {
-    font-size: 2.2rem;
+    font-size: var(--font-size-xxl);
     color: #2c3e50;
     margin-bottom: 1.8rem;
     text-align: center;
@@ -78,14 +78,14 @@
     width: 80px;
     height: 4px;
     background: linear-gradient(to right, #f05098, #ff92d2);
-    border-radius: 2px;
+    border-radius: var(--border-radius-sm);
 }
 
 /* Estilos para Párrafos dentro del Buzón (Aplicado a ambas páginas) */
 .buzon p {
-    font-size: 1.15rem;
+    font-size: var(--font-size-lg);
     line-height: 1.7;
-    color: #34495e;
+    color: var(--texto-dark);
     margin-bottom: 1.8rem;
     text-align: center;
     animation: fadeIn 0.8s ease-out 0.4s both;
@@ -94,8 +94,8 @@
 /* --- Tarjeta de Mensaje Enviado (Específico para mensajesEnviados.html) --- */
 .mensaje-enviado-contenido { /* Renombrado de .mensaje-enviado para evitar conflicto con el div original */
     background: rgba(238, 44, 130, 0.05);
-    border-left: 4px solid #ee2c82;
-    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--border-radius-md);
     padding: 1.8rem;
     margin: 2.5rem 0;
     animation: fadeIn 0.8s ease-out 0.6s both;
@@ -105,12 +105,12 @@
     text-align: left;
     margin-bottom: 1rem;
     animation: none; /* Deshabilita la animación para los párrafos dentro de esta tarjeta */
-    color: #34495e; /* Asegura el color de texto dentro de la tarjeta */
+    color: var(--texto-dark);/* Asegura el color de texto dentro de la tarjeta */
 }
 
 .mensaje-enviado-contenido p:first-child {
     font-weight: bold;
-    color: #ee2c82;
+    color: var(--color-primary);
     margin-bottom: 0.8rem;
 }
 
@@ -124,8 +124,8 @@
 }
 
 .buzon label {
-    font-size: 1rem;
-    color: #34495e; /* Color de texto para las etiquetas */
+    font-size: var(--font-size-md);;
+    color: var(--texto-dark); /* Color de texto para las etiquetas */
     display: block; /* Asegura que la etiqueta tome su propia línea */
     margin-bottom: 0.5rem; /* Pequeño espacio debajo de la etiqueta */
     align-self: flex-start; /* Alinea las etiquetas a la izquierda dentro del flexbox */
@@ -135,23 +135,23 @@
     resize: vertical;
     min-height: 150px;
     padding: 1rem;
-    font-size: 1rem;
-    font-family: 'Garamond', serif;
+    font-size: var(--font-size-md);;
+    font-family: var(--font-family);
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: var(--border-radius-md);
     width: 100%;
     box-sizing: border-box; /* El padding y el borde se incluyen en el ancho */
-    color: #333; /* Color de texto para el textarea */
-    background-color: #f8f8f8; /* Fondo ligero para el textarea */
+    color: var(--texto-dark); /* Color de texto para el textarea */
+    background-color: var(--color-secundary); /* Fondo ligero para el textarea */
 }
 
 /* Estilo para el mensaje de agradecimiento (Específico para buzon.html) */
 .thank-you {
     text-align: center;
     font-style: italic;
-    color: #57d9ff; /* Un color distintivo para este mensaje */
+    color: var(--texto-dark); /* Un color distintivo para este mensaje */
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: var(--font-size-md);;
     animation: fadeIn 0.8s ease-out 1s both; /* Animación para el mensaje */
 }
 
@@ -169,11 +169,11 @@
 .volver-btn {
     display: inline-block;
     background: linear-gradient(135deg, #ee2cce, #f29efd);
-    color: white;
+    color: var(--color-secundary);
     padding: 0.9rem 2.2rem;
     border: none;
     border-radius: 50px;
-    font-size: 1.05rem;
+    font-size: var(--font-size-md);;
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
@@ -223,12 +223,12 @@
     }
 
     .buzon h1 {
-        font-size: 1.8rem;
+        font-size: var(--font-size-xxl);
         margin-bottom: 1.2rem;
     }
 
     .buzon p {
-        font-size: 1rem;
+        font-size: var(--font-size-md);;
         margin-bottom: 1.5rem;
     }
 
@@ -245,7 +245,7 @@
 
     .volver-btn {
         padding: 0.8rem 1.8rem;
-        font-size: 0.95rem;
+        font-size: var(--font-size-md);;
         width: 100%; /* Los botones apilados ocupan todo el ancho */
         max-width: 250px; /* Limita el ancho para que no sean demasiado grandes */
         box-sizing: border-box;
@@ -256,12 +256,12 @@
     }
 
     .buzon label {
-        font-size: 0.95rem;
+        font-size: var(--font-size-md);;
     }
 
     .buzon textarea {
         min-height: 120px;
-        font-size: 0.95rem;
+        font-size: var(--font-size-md);;
     }
 }
 
@@ -273,7 +273,7 @@
 
     .buzon {
         padding: 1.5rem 1rem;
-        border-radius: 12px;
+        border-radius: var(--border-radius-xl);
     }
 
     .buzon::before {
@@ -281,7 +281,7 @@
     }
 
     .buzon h1 {
-        font-size: 1.5rem;
+        font-size: var(--font-size-xl);
         margin-bottom: 1rem;
         padding-bottom: 0.8rem;
     }
@@ -292,7 +292,7 @@
     }
 
     .buzon p {
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);;
         margin-bottom: 1.2rem;
     }
 
@@ -302,7 +302,7 @@
     }
 
     .mensaje-enviado-contenido p {
-        font-size: 0.85rem;
+        font-size: var(--font-size-sm);
     }
 
     .boton-contenedor {
@@ -312,22 +312,22 @@
 
     .volver-btn {
         padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);;
         border-radius: 40px;
     }
 
     .buzon label {
-        font-size: 0.85rem;
+        font-size: var(--font-size-sm);
     }
 
     .buzon textarea {
         min-height: 100px;
-        font-size: 0.85rem;
+        font-size: var(--font-size-sm);
         padding: 0.7rem;
     }
 
     .thank-you {
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);;
         margin-top: 1rem;
     }
 

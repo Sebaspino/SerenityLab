@@ -1,13 +1,13 @@
 /* -- Estilo general --*/
 body {
-  font-family: 'Garamond', serif;
+  font-family: var(--font-family);
   margin: 0;
   /* Elimina el margen predeterminado del body */
   line-height: 1.7;
   /* Mejora la legibilidad del texto */
-  color: #e9e9e9;
+  color: var(--color-secundary);
   /* Un color de texto base más sutil */
-  font-size: 1rem;
+  font-size: var(--font-size-md);
 }
 
 .hero {
