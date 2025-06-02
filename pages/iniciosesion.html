@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - SerenityLab</title>
+    <link rel="icon" href="../assets/img/isotipo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/body.css">
+    <link rel="stylesheet" href="../assets/css/iniciosesion.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="header__logo">
+            <img src="../assets/img/isotipo.png" class="header__logo--img" alt="Logotipo de SerenityLab"
+                onclick="location.href='../index.html'">
+        </div>
+        <nav class="header__nav">
+            <a class="header__nav--a" href="psicologos.html">Psicologos</a>
+            <a class="header__nav--a" href="buzon.html">Buzón anónimo</a>
+        </nav>
+        <div>
+            <a href="iniciosesion.html"><img src="../assets/iconos/acceso.png" class="header__logo--img"
+                    alt="Iniciar sesión" />
+            </a>
+        </div>
+    </header>
+    <main class="main-content-flex-container">
+        <div class="container login-form">
+            <h1>Registrate</h1>
+            <form class="login-form-elements" aria-labelledby="login-heading">
+                <!-- Nombre -->
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Jaime Perez" autocomplete="nombre" required>
+                <!-- Perfil -->
+                <label for="perfil">Perfil:</label>
+                <input type="text" id="perfil" name="perfil" placeholder="Estudiante / Psicologo" autocomplete="perfil"
+                    required>
+                <!-- Contraseña -->
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Password"
+                    autocomplete="current-password" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+        <div class="container role-selection">
+            <h1>Inicio de sesión</h1>
+            <form class="login-form-elements" aria-labelledby="login-heading">
+                <!-- Nombre -->
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Jaime Perez" autocomplete="nombre" required>
+                <!-- Contraseña -->
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Password"
+                    autocomplete="current-password" required>
+                <!-- Recuerdame -->
+                <div class="remember-me"> <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Recuérdame</label>
+                </div>
+                <a href="#" id="forgot-password-link">¿Olvidaste tu contraseña?</a>
+            </form>
+            <br>
+            <div class="roles">
+                <a href="perfilPsicologo.html" class="rol-card psicologo" aria-label="Ingresar como psicólogo">👨‍⚕️
+                    Psicólogo</a>
+                <a href="perfilEstudiante.html" class="rol-card estudiante" aria-label="Ingresar como estudiante">🎓
+                    Estudiante</a>
+            </div>
+        </div>
+    </main>
+    <!-- pie de página -->
+    <footer class="footer">
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Contacto</h4>
+            <img class="footer__div--img" src="../assets/iconos/gps.png" alt="Localizacion">Bello: Diagonal 50a #38-20
+            (Tierragro), piso 5.<br>
+            <img class="footer__div--img" src="../assets/iconos/correo.png"
+                alt="correo electronico">bienestarestudiantil@cesde.edu.co<br>
+            <img class="footer__div--img" src="../assets/iconos/correo.png"
+                alt="correo electronico">comunicaciones@cesde.edu.co<br>
+            <img class="footer__div--img" src="../assets/iconos/telefono.png" alt="telefono">316 354 66 17<br>
+            <img class="footer__div--img" src="../assets/iconos/telefono.png" alt="telefono">(604) 480 88 22
+        </div>
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Ubicación geográfica</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4325243175094!2d-75.5454113!3d6.3379818000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f11a205b239%3A0xa3974aa926dbfac1!2sCesde%20sede%20norte!5e0!3m2!1ses!2sco!4v1746219660722!5m2!1ses!2sco"></iframe>
+        </div>
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Redes sociales</h4>
+            <a href="https://co.linkedin.com/company/cesde-formaci%C3%B3n-t%C3%A9cnica"><img class="footer__div--img"
+                    src="../assets/iconos/linkedin.png" alt="Linkedin"></a>
+            <a href="https://www.facebook.com/Cesde/?locale=es_LA"><img class="footer__div--img"
+                    src="../assets/iconos/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/cesdeoficial/?hl=es"><img class="footer__div--img"
+                    src="../assets/iconos/instagram.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/c/SomosCESDE"><img class="footer__div--img"
+                    src="../assets/iconos/youtube.png" alt="Youtube"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

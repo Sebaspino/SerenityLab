@@ -1,0 +1,44 @@
+/* -- Pie de página --*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  background-color: var(--color-secundary);
+  color: var(--texto-dark);
+  padding: 2rem;
+  text-align: left;
+}
+
+.footer__div {
+  margin-bottom: 1.5rem;
+}
+
+.footer__div--h4 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  margin-bottom: 0.8rem;
+  color: var(--texto-dark);
+}
+
+.footer__div--img {
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.footer__div--a {
+  font-size: var(--font-size-md);
+  color: var(--color-secundary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__iframe {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 0;
+}

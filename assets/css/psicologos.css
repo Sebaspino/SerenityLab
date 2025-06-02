@@ -1,0 +1,115 @@
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f4;
+    color: var(--texto-dark);
+}
+
+h1 {
+    text-align: center;
+    font-size: var(--font-size-xxl);
+}
+
+.therapist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.therapist-card {
+    background-color: var(--color-secundary);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 5px #f123951a;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.therapist-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--color-primary);
+}
+
+.therapist-card h3 {
+    margin: 10px 0 5px;
+    color: #df628c;
+}
+
+.therapist-card .role {
+    font-weight: bold;
+    color: #814d5e;
+    margin-bottom: 5px;
+}
+
+.therapist-card .specialty {
+    font-style: italic;
+    color: #35031a;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.therapist-card .description {
+    font-size: var(--font-size-md);
+    color: #000000;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.serenty-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.serenity-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cuadro-adicional-de-informacion {
+   background-color: #ee49a4;
+   border: 1px solid #ff75af;
+   padding: 20px;
+   text-align: center;
+   margin-top: 10px;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 800px;
+   border-radius: var(--border-radius-sm);
+   color: var(--color-secundary);
+   font-size: var(--font-size-md);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .therapist-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .therapist-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .therapist-card {
+        padding: 15px;
+    }
+    .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,42 @@
+/* -- Estilo general --*/
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  line-height: 1.7;
+  color: var(--color-secundary);
+  font-size: var(--font-size-md);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  text-align: center;
+  height: 100dvh;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    object-fit: cover;
+    padding: 8rem;
+  } 
+  
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    height: fit-content;
+    padding: 8rem;
+  } 
+  
+}
+
+@media screen and (max-width: 1120px) and (min-width: 769px) {
+  .hero {
+    height: fit-content;
+    padding: 15rem;
+  }
+}

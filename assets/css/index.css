@@ -1,0 +1,154 @@
+/* -- Objetivo general de Serenity --*/
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xxl);
+  color: rgb(238, 44, 130);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--texto-dark);
+}
+
+
+/* -- Servicios en tarjetas --*/
+.services {
+  padding: 3rem 2rem;
+  background-color: rgba(238, 44, 130, 0.9);
+  text-align: center;
+  color: #fff;
+}
+
+.services h2 {
+  font-family: var(--font-family);
+  color: var(--texto-dark);
+  font-size: var(--font-size-xxl);
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-cards__card {
+  background-color: #fff;
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+  flex: 1 1 300px;
+  text-align: center;
+  color: var(--texto-dark);
+}
+
+.service-cards__card--img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.service-cards__card--h3 {
+  font-size: var(--font-size-md);
+  margin-bottom: 0.8rem;
+  color: rgb(238, 44, 130);
+}
+
+.service-cards__card--p {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+}
+
+/* -- Pie de página --*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  color: var(--texto-dark);
+  padding: 2rem;
+  text-align: left;
+}
+
+.footer__div {
+  margin-bottom: 1.5rem;
+}
+
+.footer__div--h4 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  margin-bottom: 0.8rem;
+  color: var(--texto-dark);
+}
+
+.footer__div--img {
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.footer__div--a {
+  font-size: var(--font-size-md);
+  color: var(--color-secundary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__div--a:hover {
+  color: rgb(238, 44, 130);
+}
+
+.footer__iframe {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__iframe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about__h1 {
+    font-size: var(--font-size-xxxl);
+  }
+  
+  .about__p {
+    font-size: var(--font-size-md);
+  }
+
+  .service__h2 {
+    font-size: var(--font-size-xxl);
+  }
+}

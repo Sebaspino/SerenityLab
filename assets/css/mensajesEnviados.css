@@ -1,0 +1,167 @@
+/* Animaciones clave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Estructura de la base */
+.buzon-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f0ff 0%, #f0f9ff 100%);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.buzon {
+  padding: 3rem 2.5rem;
+  background: var(--color-secundary);
+  border-radius: var(--border-radius-xxl);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 650px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.buzon:hover {
+  transform: translateY(-5px);
+}
+
+.buzon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-primary), #f85eab);
+}
+
+/* Estilos para el encabezado */
+.buzon h1 {
+  font-size: var(--font-size-xxl);
+  color: #2c3e50;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.buzon h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #f05098, #ff92d2);
+  border-radius: var(--border-radius-sm);
+}
+
+.buzon p {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  color: #34495e;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+/* Tarjeta de mensaje dinámica */
+.mensaje-enviado {
+  background: rgba(238, 44, 130, 0.05);
+  border-left: 4px solid #ee2c82;
+  border-radius: var(--border-radius-md);
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.mensaje-enviado p {
+  text-align: left;
+  margin-bottom: 1rem;
+  animation: none;
+}
+
+.mensaje-enviado p:first-child {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+/* Botón */
+.volver-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ee2cce, #f29efd);
+  color: var(--color-secundary);
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(238, 44, 130, 0.3);
+  margin: 1.5rem auto 0;
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+.boton-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .boton-contenedor {
+    flex-direction: column;
+  }
+}
+
+.volver-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(238, 44, 130, 0.4);
+  background: linear-gradient(135deg, #d82678, #8c1fa0);
+}
+
+.volver-btn:active {
+  transform: translateY(1px);
+}
+
+/* Efecto de confeti decorativo */
+.buzon::after {
+  content: "✓";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 8rem;
+  color: var(--color-primary);
+  z-index: 0;
+  animation: float 0.5s ease-in-out infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .buzon::after {
+    font-size: 3.5rem;
+    top: 20px;
+  }
+}

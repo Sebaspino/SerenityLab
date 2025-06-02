@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerenityLab</title>
+    <link rel="icon" href="assets/img/isotipo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Links de Carrusel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T6pVvR3lHTtQ5TlnBcjXsdyvBxYSgHWYrbv0fAw6YjxklFjiCwMD+ih3y+gxIOjg" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/img/isotipo.png" class="header__logo--img" alt="Logotipo de SerenityLab">
+        </div>
+        <nav class="header__nav">
+            <a class="header__nav--a" href="pages/psicologos.html">Psicologos</a>
+            <a class="header__nav--a" href="pages/buzon.html">Buzón anónimo</a>
+        </nav>
+        <div>
+            <a href="pages/iniciosesion.html"><img src="assets/iconos/acceso.png" class="header__logo--img"
+                    alt="Iniciar sesión" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Carrusel -->
+        <section class="hero">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner1.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner2.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay loop muted>
+                            <source src="assets/videos/banner3.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- Sección sobre SerenityLab -->
+        <section class="about">
+            <h1>SerenityLab</h1>
+            <p>
+                En SerenityLab creemos en el poder de la escucha activa y en la importancia de promover acciones que
+                favorezcan el bienestar integral de nuestros estudiantes.
+            </p>
+            <p>
+                Este sitio web ha sido creado especialmente para promover y fortalecer el bienestar integral de los
+                estudiantes del CESDE. Ofrece un espacio accesible y seguro donde podrás encontrar recursos,
+                herramientas y
+                apoyo profesional para tu desarrollo emocional, mental y académico. Aquí tendrás acceso directo a
+                orientación psicológica y acompañamiento en momentos de estrés, dificultades personales o cuando
+                necesites
+                hablar con alguien.
+            </p>
+        </section>
+        <!-- Servicios ofrecidos -->
+        <section class="services">
+            <h2>Conoce nuestros servicios</h2>
+            <div class="service-cards">
+                <div class="service-cards__card">
+                    <a href="pages/iniciosesion.html"><img class="service-cards__card--img" src="assets/img/agenda.png"
+                            alt="Agendamiento de citas"></a>
+                    <h3 class="service-cards__card--h3">Agendamiento de citas</h3>
+                    <p class="service-cards__card--p">Accede con tu cuenta para consultar la disponibilidad de nuestro
+                        equipo de profesionales.</p>
+                </div>
+                <div class="service-cards__card">
+                    <a href="pages/buzon.html"><img class="service-cards__card--img" src="assets/img/buzon.png"
+                            alt="Buzón anónimo"></a>
+                    <h3 class="service-cards__card--h3">Buzón anónimo</h3>
+                    <p class="service-cards__card--p">Puedes compartir tus preocupaciones de manera segura y anónima.
+                        Garantizamos que serán escuchadas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- pie de página -->
+    <footer class="footer">
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Contacto</h4>
+            <img class="footer__div--img" src="assets/iconos/gps.png" alt="Localizacion">Bello: Diagonal 50a #38-20
+            (Tierragro), piso 5.<br>
+            <img class="footer__div--img" src="assets/iconos/correo.png"
+                alt="correo electronico">bienestarestudiantil@cesde.edu.co<br>
+            <img class="footer__div--img" src="assets/iconos/correo.png"
+                alt="correo electronico">comunicaciones@cesde.edu.co<br>
+            <img class="footer__div--img" src="assets/iconos/telefono.png" alt="telefono">316 354 66 17<br>
+            <img class="footer__div--img" src="assets/iconos/telefono.png" alt="telefono">(604) 480 88 22
+        </div>
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Ubicación geográfica</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4324833804585!2d-75.54798622635151!3d6.337987125294116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f11a205b239%3A0xa3974aa926dbfac1!2sCesde%20sede%20norte!5e0!3m2!1ses!2sco!4v1747361723160!5m2!1ses!2sco"></iframe>
+        </div>
+        <div class="footer__div">
+            <h4 class="footer__div--h4">Redes sociales</h4>
+            <a href="https://co.linkedin.com/company/cesde-formaci%C3%B3n-t%C3%A9cnica"><img class="footer__div--img"
+                    src="assets/iconos/linkedin.png" alt="Linkedin"></a>
+            <a href="https://www.facebook.com/Cesde/?locale=es_LA"><img class="footer__div--img"
+                    src="assets/iconos/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/cesdeoficial/?hl=es"><img class="footer__div--img"
+                    src="assets/iconos/instagram.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/c/SomosCESDE"><img class="footer__div--img" src="assets/iconos/youtube.png"
+                    alt="Youtube"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
